@@ -1,0 +1,884 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:id="@+id/cartcontainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    tools:context=".fragments.CartFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+
+        tools:context=".fragments.CartFragment">
+
+        <include layout="@layout/common_toolbar2"
+            android:visibility="gone"
+
+
+            />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentTop="true"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp">
+
+                <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:layout_centerVertical="true"
+                    android:text="حقيبه"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_11sdp" />
+
+                <ImageView
+                    android:id="@+id/serachbar"
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_filter_profile" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.25dp"
+            android:visibility="gone"
+            android:background="@color/colour_black" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_bottom"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/cartmainlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               android:visibility="gone"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    >
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/cart_recycler"
+                        style="@style/scrollbar_shape_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/product_height2"
+                        android:fadeScrollbars="false"
+                        android:paddingLeft="15dp"
+
+                        android:scrollbars="vertical"
+                        android:verticalScrollbarPosition="left"
+
+                        />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_size_eng"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+"
+                        android:textColor="#505050"
+
+                        android:textSize="@dimen/text_size" />
+
+                    <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size"
+                        android:gravity="right"
+                        android:text="الكمية"
+                        android:textColor="#777777"
+                        android:textSize="@dimen/text_size_eng" />
+
+
+                </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id = "@+id/removeall"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="@dimen/text_size_eng"
+                            android:layout_height="@dimen/text_size_eng"
+                            android:scaleType="fitXY"
+
+                            android:layout_margin="10dp"
+                            android:layout_centerInParent="true"
+                            android:layout_toLeftOf="@+id/textremove"
+
+                            android:src =  "@drawable/ic_bin"
+                            />
+
+                        <!-- <ImageView
+                             android:layout_width="23dp"
+                             android:layout_height="25dp"
+                             android:layout_margin="10dp"
+                             android:id = "@+id/removeall"
+                             android:src="@drawable/ic_delete_icon"/>-->
+
+                        <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:id = "@+id/textremove"
+
+
+                            android:text="حذف كل القطع بالسلة"
+
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/text_size_eng"
+
+                            android:textStyle="bold"
+
+                            android:textColor="#707070"
+                            android:textSize="@dimen/maintextsize"/>
+
+
+
+
+                    </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    android:visibility="gone"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/rectangular_border3"
+                        android:orientation="vertical"
+                        android:id="@+id/removealllayout"
+                        android:paddingLeft="@dimen/_46sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_45sdp"
+                        android:paddingBottom="@dimen/_8sdp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="Remove All"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/text_size_eng"
+                            android:textStyle="bold">
+
+                        </TextView>
+                    </LinearLayout>
+                </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_gravity="center_horizontal"
+    >
+    <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_8sdp"
+        android:layout_marginLeft="5dp"
+       android:paddingLeft="@dimen/text_size"
+        android:paddingRight="@dimen/text_size"
+        android:visibility="gone"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_centerVertical="true"
+
+
+
+
+        android:text="@string/viewgiftbox"
+        android:background="@drawable/shppingreviewbackground"
+        android:id="@+id/btnviewgift"
+        android:textColor="#fff"
+
+        />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id = "@+id/giftboxadd"
+                    android:visibility="gone"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:layout_toRightOf="@+id/btnviewgift"
+                    android:background="@drawable/grey_rectangular"
+                    android:layout_marginLeft="@dimen/_10sdp"
+
+                    >
+
+                    <ImageView
+                        android:layout_width="@dimen/text_size"
+                        android:layout_height="@dimen/text_size"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="8dp"
+                        android:id="@+id/giftimg"
+                        android:src="@drawable/ic_gift_yellow"/>
+                    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+
+
+
+
+                        android:text="طلب صندوق هدية +25"
+
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_toRightOf="@+id/giftimg"
+                        android:textStyle="bold"
+                        android:id="@+id/gifttext"
+                        android:textColor="#272140"
+                        android:textSize="@dimen/_10sdp"/>
+                    <ImageView
+                        android:layout_width="@dimen/text_size"
+                        android:layout_height="@dimen/text_size"
+
+                        android:visibility="visible"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_toRightOf="@+id/gifttext"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/checkbox"
+
+                        android:src="@drawable/ic_circle"/>
+                </RelativeLayout>
+
+                </RelativeLayout>
+
+
+              <!--  <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/maintextsize"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:visibility="visible"
+
+
+                    android:text="@string/viewgiftbox"
+                    android:background="@drawable/shppingreviewbackground"
+                    android:id="@+id/btnviewgift"
+                    android:textColor="#fff"
+
+                    />
+-->
+               <!-- <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/maintextsize"
+                    android:layout_marginLeft="5dp"
+                    android:padding="5dp"
+                    android:visibility="visible"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="@dimen/maintextsize"
+
+
+                    android:text="@string/viewgiftbox"
+
+                    android:id="@+id/btnviewgift"
+                    android:textColor="#77838F"
+
+                    />
+
+-->
+
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginLeft="12dp"
+                    android:visibility="gone"
+                    android:layout_marginRight="12dp"
+                    android:orientation="vertical">
+
+
+                    <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_eng"
+                        android:visibility="gone"
+                        android:text="@string/giftboxtext"
+                        android:textColor="@color/colour_black"
+                        android:id="@+id/destext"
+                        />
+
+
+
+                    <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_eng"
+                        android:visibility="gone"
+                        android:text="@string/viewgiftbox"
+                        android:gravity="right"
+
+                        android:id="@+id/btnviewgift2"
+                        android:textColor="@color/colour_black"
+
+                        />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        android:id = "@+id/giftImage"
+                        android:visibility="gone"
+                        android:layout_marginTop="10dp">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/giftbox1"/>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:id="@+id/clooseImage"
+
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_gravity="right"
+                            android:src="@drawable/close"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/text_size"
+                        android:layout_marginRight="@dimen/text_size"
+
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp">
+
+                            <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+                                android:id="@+id/totalpricewithouttax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:textColor="#77838F"
+                                android:textSize="@dimen/_9sdp"
+
+                               />
+
+                            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+
+
+                                android:text="المجموع الفرعي"
+                                android:textColor="#77838F"
+                                android:textSize="@dimen/_9sdp" />
+
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="10dp"
+
+                            android:visibility="gone"
+
+                            >
+
+                            <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+                                android:id="@+id/giftwrappingcharge"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:textColor="#77838F"
+                                android:textSize="@dimen/_10sdp"
+                                android:text="SAR 0"
+                               />
+
+                            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="right"
+                                android:text="صندوق هدية"
+                                android:textColor="#77838F"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/text_size_eng"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                                android:id="@+id/totalprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:textColor="@color/colour_black"
+                                android:textSize="@dimen/text_size_eng"
+
+                                android:textStyle="bold" />
+
+                            <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/text_size"
+                                android:gravity="right"
+                                android:text="الإجمالي"
+                                android:textColor="@color/colour_black"
+                                android:textSize="@dimen/text_size_eng" />
+
+
+                        </LinearLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone"
+
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="12dp"
+                            >
+
+                            <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_marginBottom="0dp"
+                                android:gravity="left"
+                                android:textStyle="bold"
+                                android:textSize="@dimen/text_size_eng"
+                                android:textColor="@color/colour_black"
+                                android:id="@+id/discoutnamount"
+
+                                android:text="- SAR 0" />
+
+                            <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_alignParentRight="true"
+                                android:layout_alignParentBottom="true"
+                                android:layout_gravity="right"
+                                android:layout_marginEnd="0dp"
+                                android:layout_marginBottom="0dp"
+                                android:gravity="right"
+                                android:text="الخصم"
+                                android:textSize="@dimen/text_size_eng"
+                                android:id="@+id/coupenname"
+                                android:textColor="@color/et_hint" />
+
+
+                        </RelativeLayout>
+
+                        <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/text_size_eng"
+                            android:layout_marginLeft="@dimen/text_size"
+                            android:gravity="center_horizontal"
+                            android:text="الشحن (المملكة العربية السعودية في 3 - 7 أيام ) "
+                            android:textColor="@color/colour_black"
+                            android:textSize="@dimen/text_size_eng"
+                            android:visibility="gone" />
+
+                        <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/text_size_eng"
+                            android:layout_marginLeft="@dimen/text_size"
+                            android:gravity="center_horizontal"
+                            android:text="SAR 25"
+                            android:textColor="#777777"
+                            android:textSize="@dimen/text_size"
+                            android:visibility="gone" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/text_size_eng"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="SAR 150"
+                                android:textColor="@color/colour_black"
+                                android:textSize="@dimen/text_size_eng"
+
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/text_size"
+                                android:gravity="right"
+                                android:text="الإجمالي"
+                                android:textColor="@color/colour_black"
+                                android:textSize="@dimen/text_size_eng" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/text_size_eng"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                                android:id="@+id/shippingcharges"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text=""
+                                android:textColor="@color/colour_black"
+                                android:textSize="@dimen/text_size_eng"
+
+                                android:textStyle="bold" />
+
+                            <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/text_size"
+
+                                android:gravity="center_horizontal"
+                                android:text="الشحن (المملكة العربية السعودية في 3 - 7 أيام ) "
+                                android:textColor="@color/colour_black"
+                                android:textSize="@dimen/text_size_eng" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/et_padding"
+                            android:visibility="gone"
+                            android:orientation="horizontal">
+
+                            <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                                android:id="@+id/totalTax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:textColor="@color/colour_black"
+                                android:textSize="@dimen/text_size_eng"
+
+
+                                android:textStyle="bold" />
+
+                            <com.eoutlet.Eoutlet.customview.MonestrateRegularTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/text_size"
+                                android:gravity="right"
+                                android:text="الضريبة"
+
+
+                                android:textColor="@color/et_hint"
+                                android:textSize="@dimen/text_size_eng" />
+
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="12dp"
+                            android:layout_marginRight="12dp"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+
+                            android:orientation="horizontal">
+
+                            <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+                                android:id="@+id/totalpricewithTax"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_10sdp"
+
+
+                                android:textStyle="bold" />
+                            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/text_size"
+                                android:gravity="right"
+                                android:text="إجمالي الطلب"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="@dimen/_10sdp"
+
+                                android:textStyle="bold" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_18sdp"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/rectangular_border3"
+                        android:id="@+id/coupanmainlayout"
+                        android:layout_height="wrap_content">
+                        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:text="+"
+                            android:id = "@+id/plusbutton"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_18sdp"
+                            android:textColor="@color/colour_black"
+
+                            android:textStyle="bold"/>
+                        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/text_size"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_45sdp"
+                            android:textColor="@color/colour_black"
+                            android:text="استخدام قسيمة مشتريات"
+                            />
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_45sdp"
+                            android:paddingRight="@dimen/_5sdp"
+
+                            android:layout_gravity="right"/>
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+
+                    android:id="@+id/coupenlayout"
+                    android:visibility="gone"
+                    android:layout_marginBottom="@dimen/et_padding"
+
+                    android:orientation="horizontal"
+
+                    android:layout_marginRight="12dp">
+
+                    <EditText
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:hint="ادخل كود الرصيد"
+                        android:id="@+id/edt_coupen"
+                        android:paddingLeft="3dp"
+                        android:gravity="right"
+                        android:layout_gravity="center_vertical"
+
+                        android:layout_marginRight="10dp"
+                        android:paddingTop="2dp"
+                        android:paddingRight="5dp"
+
+                        android:paddingBottom="2dp"
+                        android:singleLine="true"
+
+                        android:background="@drawable/rectangular_border"/>
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                        android:id="@+id/applycode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="34dp"
+                        android:background="@drawable/red_rectangle"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/text_size"
+                        android:paddingTop="2dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="2dp"
+                        android:text="تطبيق الرصيد"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size"
+
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/proceedtoCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="6dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+
+        android:layout_marginBottom="@dimen/text_size"
+        android:background="@drawable/green_rectangular_button"
+
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+
+
+
+
+            >
+
+
+
+
+
+            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+
+
+                android:gravity="center"
+                android:layout_centerInParent="true"
+
+
+                android:text="متابعة لعنوان الشحن"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </FrameLayout>
+
+
+    <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_margin="6dp"
+        android:layout_marginTop="@dimen/text_size"
+        android:background="#2A9A65"
+        android:clickable="true"
+        android:gravity="center_horizontal"
+        android:paddingLeft="50dp"
+        android:paddingTop="6dp"
+        android:paddingRight="50dp"
+        android:paddingBottom="6dp"
+        android:text="تنفيذ الطلب"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size"
+        android:visibility="gone" />
+
+    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+        android:id="@+id/notItemAvail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="لا يوجد لديك منتجات في حقيبة التسوق الخاصة بك"
+        android:textColor="@color/et_hint"
+        android:visibility="gone" />
+</FrameLayout>

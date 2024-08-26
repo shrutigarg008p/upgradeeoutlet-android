@@ -1,0 +1,42 @@
+
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical">
+
+    <ImageView
+
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:scaleType="fitXY"
+
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_toolbar_bag" />
+
+    <TextView
+
+        android:visibility="gone"
+        android:id="@+id/toolbar_cart_badge_text"
+
+        android:layout_centerVertical="true"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginLeft="2dp"
+        android:layout_gravity="right|end|top"
+
+        android:background="@drawable/tool_noti_bedge"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="0"
+        android:textSize="10sp"/>
+    </FrameLayout>
+</LinearLayout>
+

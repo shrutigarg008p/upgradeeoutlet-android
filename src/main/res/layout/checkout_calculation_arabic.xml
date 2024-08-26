@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/text_size"
+    android:id="@+id/parentlayout"
+    android:layout_marginRight="@dimen/text_size"
+    android:layout_marginTop="@dimen/maintextsize"
+    >
+
+    <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+        android:id="@+id/totalprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:gravity="left"
+        android:text="SAR 0"
+        android:textColor="#77838F"
+        android:textSize="@dimen/_8sdp"
+
+        android:textStyle="bold" />
+
+    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginEnd="0dp"
+        android:layout_toRightOf="@+id/totalprice"
+        android:gravity="right"
+        android:text="الإجمالي"
+        android:textColor="#77838F"
+        android:textSize="@dimen/_8sdp" />
+
+
+</RelativeLayout>
+</LinearLayout>

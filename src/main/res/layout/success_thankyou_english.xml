@@ -1,0 +1,130 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_rounded_bg"
+    tools:context="com.eoutlet.Eoutlet.fragments.GiftboxFragment">
+
+
+    <ImageView
+
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="@dimen/_21sdp"
+        android:src="@drawable/logo_english_black" />
+    <ImageView
+
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="@dimen/_18sdp"
+        android:src="@drawable/ic_ordersuccessicon" />
+
+    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:textStyle="bold"
+        android:gravity="center"
+
+        android:text="Your order has been placed successfully"
+        android:textColor="#1E2022"
+        android:textSize="@dimen/_20sdp" />
+    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/text_size"
+        android:layout_marginLeft="@dimen/text_size"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="An email will be sent to you with the invoice and shipping details"
+        android:textColor="#1E2022"
+        android:textSize="@dimen/_12sdp" />
+
+    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="Rate the app"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size" />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal">
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:stepSize="1"
+   android:layout_marginTop="@dimen/_8sdp"
+        android:scaleX=".70"
+        android:scaleY=".70"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</LinearLayout>
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shppingreviewbackground"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="5dp"
+        android:id="@+id/ratingsubmit"
+
+        android:layout_marginBottom="@dimen/_21sdp"
+        android:layout_marginTop="10dp"
+        >
+
+
+
+
+
+        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:layout_centerInParent="true"
+
+
+            android:gravity="center"
+
+
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_eng" />
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:id="@+id/iv1"
+
+    >
+    <FrameLayout
+        android:layout_width="@dimen/bottom_item_width"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+    <ImageView
+        android:layout_width="@dimen/bottom_item_width"
+        android:layout_height="@dimen/bottom_item_height"
+        android:id="@+id/bottom_image"
+       />
+
+
+
+    <LinearLayout
+        android:layout_width="@dimen/bottom_item_width"
+        android:layout_height="@dimen/bottom_item_height"
+        android:background="#66ed262b"
+        android:orientation="horizontal"
+        android:id="@+id/red_background"
+        android:visibility="gone"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:textSize="@dimen/text_size"
+            android:id="@+id/bottom_textview"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical|left"
+            android:text="الأكثر مبيعا ي النظارات الشمسية"/>
+
+
+    </LinearLayout>
+
+
+    </FrameLayout>
+</LinearLayout>

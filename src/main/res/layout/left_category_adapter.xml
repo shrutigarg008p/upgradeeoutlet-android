@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/parentLayout"
+
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+  <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:id="@+id/mainview"
+    android:layout_marginTop="@dimen/text_size_eng"
+    android:layout_marginBottom="@dimen/text_size_eng"
+    android:orientation="horizontal">
+
+
+    <ImageView
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="@dimen/text_size"
+        android:scaleType="fitXY"
+        android:visibility="invisible"
+
+        android:foreground="@drawable/ic_whiteclick"
+        android:foregroundGravity="center"
+        android:id= "@+id/bottomline"
+        android:src="@drawable/ic_greycheck"/>
+
+    <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brands"
+        android:gravity="left"
+        android:textSize="@dimen/_9sdp"
+        android:id="@+id/topcatname"
+        android:maxLines="2"
+        android:layout_marginLeft="@dimen/_5sdp"
+
+        android:layout_marginRight="@dimen/_8sdp"
+        android:textColor="#000"
+ />
+
+
+
+</LinearLayout>
+
+    <View
+        android:id="@+id/line_5"
+        android:layout_width="@dimen/_225sdp"
+        android:layout_height="1.5dp"
+        android:layout_marginLeft="@dimen/text_size"
+        android:layout_marginRight="@dimen/text_size"
+        android:layout_alignBottom="@+id/mainview"
+
+
+
+
+
+
+
+
+
+        android:background="#E5E5E5"
+        />
+
+
+</LinearLayout>

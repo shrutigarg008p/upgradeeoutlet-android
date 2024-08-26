@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+    android:id="@+id/fragment_history_menu_bottom"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/toolbar_color"
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:weightSum="2"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/remembercardclick"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+
+
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="5dp"
+            android:layout_marginLeft="6dp"
+            android:elevation="6dp"
+            app:cardElevation="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:layout_height="wrap_content"
+            android:text="English"
+
+            android:button="@null"
+            android:checked="false"
+            android:drawableLeft="@drawable/radio_button_selector"
+           />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="@dimen/_5sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="6dp"
+            android:elevation="6dp"
+            app:cardElevation="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+        <RadioButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="عربى"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:layout_marginLeft="50dp"
+           />
+        </androidx.cardview.widget.CardView>
+    </RadioGroup>
+
+
+
+
+    <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Now order from the following countries using this App."
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000000"
+        android:textSize="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_9sdp"/>
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/currencyListRecycler"
+
+        android:layout_gravity="center_horizontal"
+
+        />
+
+    <LinearLayout
+        android:id="@+id/fragment_history_bottom_sheet_edit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+
+        android:orientation="horizontal"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/checkboxselected"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="Edit"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/fragment_history_bottom_sheet_delete"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:visibility="gone"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:padding="16dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/checkboxunselected"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="16dp"
+            android:text="delete"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/done"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginBottom="@dimen/text_size_eng"
+        android:layout_margin="@dimen/_10sdp"
+
+
+        android:background="@color/colorPrimary"
+
+        >
+
+
+        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+
+
+            android:gravity="center"
+
+
+            android:text="CHANGE COUNTRY"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_eng" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

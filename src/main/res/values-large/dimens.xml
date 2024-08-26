@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">26dp</dimen>
+    <dimen name="main_icon">120dp</dimen>
+    <dimen name="main_icon2">60dp</dimen>
+    <dimen name="margin_top">50dp</dimen>
+    <dimen name="text_size">28dp</dimen>
+    <dimen name="et_padding">24dp</dimen>
+    <dimen name="cart_item_padding">17dp</dimen>
+    <dimen name="btn_height">60dp</dimen>
+    <dimen name="btn_width">320dp</dimen>
+    <dimen name="text_size_eng">25dp</dimen>
+    <dimen name="margin_bottom">90dp</dimen>
+    <dimen name="product_width">190dp</dimen>
+    <dimen name="product_width1">300dp</dimen>
+    <dimen name="home_bottom_product_height">400dp</dimen>
+    <dimen name="product_height">239dp</dimen>
+    <dimen name="product_height2">239dp</dimen>
+    <dimen name="scroller_height">250dp</dimen>
+    <dimen name="product_height3">520dp</dimen>
+    <dimen name="product_height4">645dp</dimen>
+    <dimen name="selected_product_height">480dp</dimen>
+    <dimen name="size_btn_height">45dp</dimen>
+    <dimen name="size_btn_width">55dp</dimen>
+    <dimen name="item1_height">100dp</dimen>
+    <dimen name="item1_width">100dp</dimen>
+    <dimen name="homecard_width">240dp</dimen>
+    <dimen name="homecard_height">90dp</dimen>
+    <dimen name="man_width">138dp</dimen>
+    <dimen name="man_height">221dp</dimen>
+    <dimen name="bottom_item_width">157dp</dimen>
+    <dimen name="img_height">208dp</dimen>
+    <dimen name="bottom_item_height">140dp</dimen>
+    <dimen name="list_item_size">19dp</dimen>
+    <dimen name="list_group_size">23dp</dimen>
+    <dimen name="serch_height">50dp</dimen>
+    <dimen name="slider_image_height">185dp</dimen>
+    <dimen name="offer_image_height">300dp</dimen>
+
+    <dimen name="catagory_image_height">310dp</dimen>
+    <dimen name="detail_size_recycler_margin">122dp</dimen>
+    <dimen name="padding_in_size_button">35dp</dimen>
+    <dimen name="padding_in_size_minace_button">39dp</dimen>
+    <dimen name="splash_left">-120dp</dimen>
+    <dimen name="splash_right">-120dp</dimen>
+    <dimen name="splash_top">-600dp</dimen>
+    <dimen name="splash_bottom">-600dp</dimen>
+    <dimen name="home_page_text">45dp</dimen>
+    <dimen name="product_detail_padding">40dp</dimen>
+    <dimen name="text_15">20dp</dimen>
+    <dimen name="text_25">30dp</dimen>
+
+    <dimen name  = "padding_in_cart_qty">25dp</dimen>
+    <dimen name="padding_cart_image">500dp</dimen>
+    <dimen name="padding_cart_right">10dp</dimen>
+    <dimen name="brand_height">80dp</dimen>
+    <dimen name="trending_product_height">200dp</dimen>
+    <dimen name="trending_product_dimension">250dp</dimen>
+    <dimen name  = "catagory_size">150dp</dimen>
+    <dimen name  = "item_offset">3dp</dimen>
+    <dimen name="product_width2">250dp</dimen>
+    <dimen name="card_number">16dp</dimen>
+    <dimen name="payment_textmargin">100dp</dimen>
+    <dimen name="payment_text_size">25dp</dimen>
+
+
+
+
+
+    <dimen name="maintextsize">22dp</dimen>
+    <dimen name="logo_height">40dp</dimen>
+    <dimen name="radio_width">43dp</dimen>
+    <dimen name="radio_button">33dp</dimen>
+    <dimen name="back_image_width">20dp</dimen>
+    <dimen name="search_image_width">25dp</dimen>
+
+
+    <dimen name="card_image_width">100dp</dimen>
+    <dimen name="feature_height">350dp</dimen>
+
+    <dimen name="cart_product_height">239dp</dimen>
+    <dimen name="cart_desc_width">190dp</dimen>
+    <dimen name="cate_height">150dp</dimen>
+    <dimen name="tabmargintop">50dp</dimen>
+
+    <dimen name="categore_banner_height">1100dp</dimen>
+</resources>

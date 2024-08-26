@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cartItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+
+
+        card_view:cardElevation="15dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp">
+
+            <RelativeLayout
+                android:id="@+id/mainHeaderView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_marginBottom="@dimen/_8sdp">
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/orderid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:text="orderid"
+                    android:textColor="#242134"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/orderstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/totalamount"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:text="orderstatus"
+                    android:textColor="#EBA41D"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/totalamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_toLeftOf="@+id/arrow_imageview"
+                    android:text="totalamount"
+                    android:textColor="#77838F"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/totalamount"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:text="date"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/_10sdp" />
+
+                <ImageView
+                    android:id="@+id/arrow_imageview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/_4sdp"
+                    android:rotation="90"
+                    android:src="@drawable/ic_right_blackarrow"
+                    android:tint="#1A1824" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/orderstatus"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/margin_top"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+
+
+                    android:weightSum="3">
+
+                    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:id="@+id/textreorder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="1dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="1dp"
+                        android:paddingBottom="4dp"
+                        android:text="Reorder"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:id="@+id/textcancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="1dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="1dp"
+                        android:paddingBottom="4dp"
+                        android:text="Cancel"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:id="@+id/textReturn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="1dp"
+                        android:paddingTop="4dp"
+                        android:paddingRight="1dp"
+                        android:paddingBottom="4dp"
+                        android:text="Return"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layoutChild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mainHeaderView"
+                android:orientation="vertical"
+                android:visibility="visible"></LinearLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

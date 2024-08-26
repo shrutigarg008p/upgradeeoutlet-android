@@ -1,0 +1,67 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.eoutlet.Eoutlet.fragments.ZoomImageFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <com.eoutlet.Eoutlet.utility.HackyViewPager
+        android:id="@+id/zoomviewPager"
+        android:layout_width="match_parent"
+        android:background="#000"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_height="match_parent" />
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/indicatorzoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+
+
+
+
+            app:tabBackground="@drawable/tab_selector"
+            app:tabGravity="center"
+
+            app:tabIndicatorHeight="0dp" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/imageView_close"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_size_eng"
+
+            android:layout_margin="@dimen/et_padding"
+
+
+            android:clickable="true"
+            app:srcCompat="@drawable/ic_cross_white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_size"
+            android:id = "@+id/currentpage"
+            android:layout_gravity="top|right"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_eng"
+
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/et_padding"
+            android:layout_centerVertical="true"
+            android:text="1/4"
+            />
+    </RelativeLayout>
+
+</FrameLayout>

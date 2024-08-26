@@ -1,0 +1,350 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:id="@+id/fullview"
+
+        tools:context="com.eoutlet.Eoutlet.fragments.GiftboxFragment">
+
+
+        <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:text = "إضافة بوكس الهدية"
+
+            android:textColor="@color/colour_black"
+            android:textSize="@dimen/text_size" />
+
+
+
+
+        <ImageView
+            android:id="@+id/giftboxImage"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginLeft="@dimen/text_size_eng"
+            android:layout_marginRight="@dimen/text_size_eng"
+            android:layout_marginTop="10dp"
+
+            android:scaleType="fitXY" />
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <RelativeLayout
+            android:id="@+id/giftboxadd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/messagebackground"
+            android:paddingTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+
+            android:layout_marginRight="20dp"
+            android:paddingBottom="5dp"
+
+
+            >
+
+            <ImageView
+                android:id="@+id/giftcheckbox"
+                android:layout_width="@dimen/text_size"
+
+                android:layout_height="@dimen/text_size"
+                android:layout_marginLeft="5dp"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_alignParentRight="true"
+
+                android:src="@drawable/ic_yellow_check"
+
+                android:visibility="visible" />
+
+
+            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+
+
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_toLeftOf="@+id/giftcheckbox"
+
+                android:text=" "
+                android:textColor="#272140"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/messagebackground"
+            android:paddingTop="5dp"
+            android:layout_marginLeft="20dp"
+            android:id = "@+id/addgiftboxmsg"
+
+            android:layout_marginRight="20dp"
+            android:paddingBottom="5dp"
+
+
+            >
+
+            <ImageView
+
+                android:layout_width="@dimen/text_size"
+
+                android:layout_height="@dimen/text_size"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="5dp"
+                android:layout_alignParentRight="true"
+
+
+                android:src="@drawable/untickmsg"
+                android:id = "@+id/giftmsgcheck"
+
+                android:visibility="visible" />
+
+
+            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_centerVertical="true"
+                android:layout_marginRight="6dp"
+                android:layout_toLeftOf="@+id/giftmsgcheck"
+                android:text="اضافة رسالة الهدية"
+                android:textColor="#272140"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/giftmsgtext"
+
+            android:layout_centerVertical="true"
+            android:layout_marginRight="6dp"
+            android:layout_toRightOf="@+id/giftimg"
+            android:text="Gift Message"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="#272140"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="left"
+            android:visibility="gone"
+
+
+            android:background="@drawable/messagebackground"
+            android:textColor="@color/colour_black"
+            android:layout_marginTop="3dp"
+            android:id="@+id/giftboxmsg"
+            android:layout_marginLeft="20dp"
+            android:hint="Message(Optional)"
+            android:padding="@dimen/_4sdp"
+
+
+            android:layout_marginRight="20dp"
+
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:visibility="visible"
+            android:id="@+id/giftwrapbtn"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:weightSum="2"
+
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:id= "@+id/giftwrapsubmit"
+
+
+
+
+                android:layout_marginBottom="@dimen/text_size"
+                android:background="@drawable/green_rectangular_button"
+
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+
+                    >
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+
+
+                        android:text="تطبيق"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_eng" />
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </FrameLayout>
+
+            <FrameLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="10dp"
+                android:id="@+id/giftwrapremove"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+
+
+
+
+                android:layout_marginBottom="@dimen/text_size"
+                android:background="@drawable/green_rectangular_button"
+
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+
+                    >
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+                        android:text="الغاء"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_eng" />
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </FrameLayout>
+            <FrameLayout
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:layout_weight="1"
+
+
+                android:id="@+id/giftwrapcancel"
+
+                android:layout_marginBottom="@dimen/text_size"
+                android:background="@drawable/grey_rectangle_shape"
+
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+
+                    >
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_centerInParent="true"
+
+
+                        android:text="يلغي"
+                        android:textColor="@color/colour_black"
+                        android:textSize="@dimen/text_size_eng" />
+
+
+                </RelativeLayout>
+
+
+
+
+
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+
+</FrameLayout>

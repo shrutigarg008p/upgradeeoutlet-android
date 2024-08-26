@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/mainimageclick"
+    android:layout_width="@dimen/_110sdp"
+    android:layout_height="@dimen/_190sdp"
+    android:layout_marginRight="@dimen/_8sdp"
+    android:background="@drawable/rounded_corner_shape"
+    android:clickable="true"
+    android:layout_gravity="right"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffff">
+
+        <ImageView
+            android:id="@+id/product_list_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/shoe1" />
+    </androidx.cardview.widget.CardView>
+
+    <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+        android:id="@+id/productname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:ellipsize="end"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="ROBERTO CAVALLI - PERFUME"
+        android:textColor="#1E2022"
+        android:textSize="@dimen/_8sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:gravity="center_horizontal">
+
+        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+            android:id="@+id/oldprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:ellipsize="end"
+            android:foreground="@drawable/cut_line"
+            android:maxLines="1"
+            android:text="999 SAR"
+            android:textColor="#1E2022"
+            android:textSize="@dimen/_7sdp" />
+
+        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+            android:id="@+id/newprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/oldprice"
+            android:ellipsize="end"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:maxLines="1"
+            android:text="666 SAR"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_7sdp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

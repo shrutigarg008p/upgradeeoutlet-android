@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D8A664</color>
+    <color name="colorPrimarytext">#A63735</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#fff</color>
+    <color name="et_hint">#ff505050 </color>
+    <color name="menu_item_colour">#670730</color>
+
+    <color name="background">#FF0000 </color>
+    <color name="colour_black">#000 </color>
+    <color name="dialogue_background">#ffff</color>
+    <color name="grey_colour">#E6D3D3D3</color>
+    <color name="toolbar_text">#20242b</color>
+    <color name="toolbar_color">#F5F5F5</color>
+    <color name="greyText">#ff505050</color>
+
+    <color name="canceled">#FF2650</color>
+    <color name="pending">#EBA41D</color>
+    <color name="success">#34C47C</color>
+    <color name="transparentbackground">#7F000000</color>
+
+
+
+
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <item android:drawable="@drawable/ic_white_beg" android:color="@color/white" android:state_checked="true"/>
+        <item android:drawable="@drawable/ic_red_beg" android:state_checked="false"/>
+
+</selector>-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:drawable="@drawable/ic_beg_white" android:state_checked="true"/>
+        <item android:drawable="@drawable/ic_beg_black"  android:state_checked="false"/>
+
+</selector>

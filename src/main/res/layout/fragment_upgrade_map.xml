@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/locationMapFragmentView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:isScrollContainer="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/mapHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp">
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="Add Address"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_12sdp" />
+
+
+                <ImageView
+                    android:id="@+id/backButton"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.50"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_leftarrowlat" />
+
+
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/mapContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.75"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <fragment
+                    android:id="@+id/map"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:context=".fragments.LocationMapFragment" />
+
+                <ImageView
+                    android:id="@+id/imgLocationIcon"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/user_location"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_10sdp">
+
+                    <FrameLayout
+                        android:id="@+id/autoCompleteFrameLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <AutoCompleteTextView
+                            android:id="@+id/place_search"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/ic_mapsearchrectangle"
+                            android:gravity="center_vertical"
+                            android:hint="Search here..."
+                            android:paddingLeft="@dimen/_30sdp"
+                            android:paddingRight="@dimen/_30sdp"
+                            android:singleLine="true"
+                            android:textColor="@color/colour_black"
+                            android:textSize="@dimen/_12sdp" />
+
+
+                        <ImageView
+                            android:id="@+id/backarrow"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:src="@drawable/ic_mapbackarrow" />
+
+                        <ImageView
+                            android:id="@+id/clear_text"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_gravity="center_vertical|right"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@drawable/ic_mapcross" />
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/editAddressButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/autoCompleteFrameLayout"
+                        android:gravity="end"
+                        android:visibility="gone">
+
+                        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/edit_background"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:paddingBottom="@dimen/_5sdp"
+                            android:text="EDIT"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_9sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/notDeliveredText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/autoCompleteFrameLayout"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/canceled"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Sorry! We do not have delivery option for this location."
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_9sdp" />
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/autoCompleteRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/autoCompleteFrameLayout" />
+                </RelativeLayout>
+            </FrameLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/addressConfirmContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_weight="0.25">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/upgradeConfirmAddressSubmitButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_mapgreybutton">
+
+                        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="CONFIRM MY LOCATION"
+                            android:textColor="#fff"
+                            android:textSize="@dimen/_11sdp" />
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/enterAddressManuallyLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:orientation="vertical">
+
+                        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ENTER ADDRESS MANUALLY"
+                            android:textColor="@color/toolbar_text"
+                            android:textSize="@dimen/_9sdp" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:gravity="center_horizontal"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/horizontalline"
+                            app:tint="#77838F" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <!--            address fields-->
+        <LinearLayout
+            android:id="@+id/addressFields"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.4"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/upgradeFindMeOnMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_15sdp"
+                        android:background="@drawable/black"
+                        android:visibility="gone">
+
+                        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_5sdp"
+                            android:text="FIND ME ON MAP"
+                            android:textColor="#fff"
+                            android:textSize="@dimen/_13sdp" />
+                    </FrameLayout>
+
+
+                    <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:text="Complete Your Address"
+                        android:textColor="#979797"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/cityTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hintEnabled="false">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                                android:id="@+id/city"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:drawableRight="@drawable/ic_down_arrow"
+                                android:focusableInTouchMode="false"
+                                android:hint="City"
+                                android:inputType="none"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_10sdp" />
+
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/areaTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:hintEnabled="false">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                                android:id="@+id/area"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Area"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/streetNameTextInputLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:hintEnabled="false">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                                android:id="@+id/streetname"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Address"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/firstNameTextInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:hintEnabled="false">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                                android:id="@+id/firstName"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="First Name"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/lastNameTextInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:hintEnabled="false">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                                android:id="@+id/lastName"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Last Name"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <!--                        <LinearLayout-->
+                        <!--                            android:layout_width="0dp"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:layout_weight="1"-->
+                        <!--                            android:orientation="vertical">-->
+
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/countryNameInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:hintEnabled="false">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                                android:id="@+id/country"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:focusableInTouchMode="false"
+                                android:hint="Country"
+                                android:drawableRight="@drawable/ic_down_arrow"
+                                android:inputType="none"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <Spinner
+                                android:id="@+id/countrycodeSpinner"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="-5dp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:background="@drawable/spinner_background_address"
+                                android:popupTheme="@style/PopupBackGround"
+                                android:spinnerMode="dialog"
+                                android:textColor="@android:color/black"
+                                android:visibility="gone" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <!--                        </LinearLayout>-->
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/mobileNumberInputLayout"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            app:hintEnabled="false">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                                android:id="@+id/mobileNumber"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:hint="Mobile No."
+                                android:inputType="number"
+                                android:singleLine="true"
+                                android:textSize="@dimen/_10sdp" />
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:id="@+id/upgradeAddAddressSubmitButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/ic_mapgreybutton">
+
+                        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Confirm Location"
+                            android:textColor="#fff"
+                            android:textSize="@dimen/_13sdp" />
+                    </FrameLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+        <!--            address fields-->
+    </LinearLayout>
+</LinearLayout>

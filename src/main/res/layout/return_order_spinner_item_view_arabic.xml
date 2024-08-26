@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/returnOrderSpinnerItem"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/underline"
+    android:drawablePadding="30dip"
+    android:gravity="right"
+    android:layoutDirection="rtl"
+    android:padding="20dp"
+    android:text="Select One"
+    android:textColor="@color/white"
+    android:textSize="@dimen/list_item_size" />
+
+
+    <!--    android:drawableRight="@drawable/radio"
+    -->

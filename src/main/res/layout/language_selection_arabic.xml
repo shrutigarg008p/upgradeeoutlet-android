@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical">
+
+
+
+    <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="من فضلك إختر لغة"
+
+        android:layout_gravity="center_horizontal"
+
+        android:textColor="#979797"
+        android:textSize="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_8sdp"/>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        >
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="6dp"
+            android:elevation="6dp"
+            app:cardElevation="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="@dimen/_21sdp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_4sdp"
+
+                android:paddingRight="@dimen/_4sdp"
+
+                xmlns:android="http://schemas.android.com/apk/res/android">>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="70dp"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:textAlignment="textEnd"
+                        android:text="English"
+                        android:textColor="#1E2022"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="50dp"
+                        android:orientation="horizontal">
+
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/english"
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_marginLeft="@dimen/_18sdp"
+
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical|left"
+
+                        android:background="@drawable/unselected" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="@dimen/_4sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="6dp"
+            android:elevation="6dp"
+            app:cardElevation="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginBottom="@dimen/_21sdp"
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto">
+
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_8sdp"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingLeft="@dimen/_4sdp"
+
+                android:paddingRight="@dimen/_4sdp"
+
+                xmlns:android="http://schemas.android.com/apk/res/android">>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    >
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="70dp"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:textAlignment="textEnd"
+                        android:text="العربية"
+                        android:textColor="#1E2022"
+                        android:textSize="@dimen/_10sdp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/name"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="50dp"
+                        android:orientation="horizontal">
+
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="@dimen/_18sdp"
+                        android:layout_height="@dimen/_18sdp"
+                        android:layout_alignParentLeft="true"
+
+                        android:id="@+id/arabic"
+
+                        android:layout_marginLeft="@dimen/_18sdp"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical|left"
+
+                        android:background="@drawable/unselected"
+                        />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/continuelanguagechange"
+        android:clickable="true"
+
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_8sdp"
+        android:weightSum="1"
+        android:orientation="horizontal">
+
+
+
+
+        <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:text="استمر"
+            android:id="@+id/continuetohom"
+            android:clickable="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:background="@drawable/green_rectangular_button"
+
+
+
+
+            android:textColor="#fff"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_20sdp"/>
+</LinearLayout>

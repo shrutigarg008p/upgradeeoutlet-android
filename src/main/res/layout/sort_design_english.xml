@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_top"
+                        android:text="رتب حسب"
+                        android:visibility="gone"
+
+
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/text_size"
+                        android:textStyle="bold" />
+
+                    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Default"
+
+                        android:gravity="center"
+                        android:textSize="@dimen/text_size_eng"
+                        android:textColor="#3e3e3e"
+                       android:layout_centerInParent="true"
+                        android:id="@+id/defaultlist"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/text_size_eng"/>
+                    <ImageView
+                        android:layout_width="@dimen/list_item_size"
+                        android:layout_height="@dimen/list_item_size"
+                       android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+
+                        android:id="@+id/tick_image"
+                        android:visibility="gone"
+                        android:layout_marginLeft="@dimen/_8sdp"
+                        android:src="@drawable/category_tick"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dip"
+                        android:background="@color/et_hint"
+                        android:layout_below="@+id/defaultlist"
+                        android:textColor="@color/colour_black"
+                       android:layout_marginTop="@dimen/text_size_eng"
+
+                        />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                         android:gravity="center"
+                        android:text="Recently Arrived"
+                        android:textSize="@dimen/text_size_eng"
+                        android:textColor="#3e3e3e"
+                        android:id="@+id/recentlyarrived"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/text_size_eng"/>
+                        <ImageView
+                            android:layout_width="@dimen/list_item_size"
+                            android:layout_height="@dimen/list_item_size"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+
+                            android:id="@+id/tick_image2"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:src="@drawable/category_tick"/>
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dp"
+                        android:background="@color/et_hint"
+                        android:layout_below="@+id/recentlyarrived"
+                        android:textColor="@color/colour_black"
+                        android:layout_marginTop="@dimen/text_size_eng"
+                        />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+
+                        android:text="Price low to high"
+                        android:textSize="@dimen/text_size_eng"
+
+                        android:textColor="#3e3e3e"
+                        android:layout_gravity="center"
+                        android:id="@+id/lowtohigh"
+                        android:layout_marginTop="@dimen/text_size_eng"/>
+                        <ImageView
+                            android:layout_width="@dimen/list_item_size"
+                            android:layout_height="@dimen/list_item_size"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+
+                            android:id="@+id/tick_image3"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:src="@drawable/category_tick"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dip"
+                        android:background="@color/et_hint"
+                        android:layout_below="@+id/lowtohigh"
+                        android:textColor="@color/colour_black"
+                        android:layout_marginTop="@dimen/text_size_eng"
+                        />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:id="@+id/hightolow"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+
+
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/text_size_eng"
+                        android:text="Price high to low"
+                        android:textColor="#3e3e3e"
+                        android:textSize="@dimen/text_size_eng" />
+                        <ImageView
+                            android:layout_width="@dimen/list_item_size"
+                            android:layout_height="@dimen/list_item_size"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+
+                            android:id="@+id/tick_image4"
+                            android:visibility="gone"
+                            android:layout_marginLeft="@dimen/_8sdp"
+                            android:src="@drawable/category_tick"/>
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="0.5dip"
+                        android:background="@color/et_hint"
+                        android:layout_below="@+id/hightolow"
+                        android:textColor="@color/colour_black"
+
+                        android:layout_marginTop="@dimen/text_size_eng"
+                        />
+                    </RelativeLayout>
+                        <Button
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="تطبيق"
+                            android:visibility="gone"
+                            android:padding="@dimen/fab_margin"
+                            android:textColor="@color/white"
+                            android:layout_marginBottom="@dimen/text_size_eng"
+                            android:background="@drawable/red_rectangle"
+                            android:layout_marginTop="@dimen/margin_top"
+                            android:layout_gravity="center_horizontal"/>
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

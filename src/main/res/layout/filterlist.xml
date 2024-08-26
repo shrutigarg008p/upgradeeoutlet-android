@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/filterlistclick"
+
+        android:clickable="true"
+        android:layout_marginTop="@dimen/text_size_eng"
+        android:layout_marginBottom="@dimen/text_size_eng"
+        android:padding="5dp"
+
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:background="@drawable/rectangular_border_corner2">
+
+
+        <ImageView
+            android:layout_width="@dimen/text_size_eng"
+            android:layout_height="@dimen/text_size_eng"
+
+            android:layout_marginLeft="6dp"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:layout_gravity="center_vertical"
+
+
+            android:gravity="left"
+
+            android:id="@+id/filterlisticon"
+
+            android:clickable="true"
+
+
+            android:src = "@drawable/ic_sort_icon_black"
+
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/counter"
+            android:visibility="gone"
+            android:layout_gravity="center"
+
+
+            android:layout_marginLeft="6dp"
+
+            android:textStyle="bold"
+
+
+            android:text="(0)"
+            android:layout_marginRight="2dp"
+            android:textColor="@color/colour_black"
+            android:textSize="@dimen/text_size_eng" />
+
+        <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/childname"
+            android:layout_gravity="center"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:text=" ترتيب حسب"
+            android:textColor="@color/colour_black"
+            android:textSize="@dimen/_8sdp" />
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

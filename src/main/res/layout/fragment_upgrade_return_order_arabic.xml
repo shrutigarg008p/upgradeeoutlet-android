@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:screenReaderFocusable="true"
+    tools:context=".fragments.UpgradeReturnOrderFragment">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp">
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:gravity="center"
+
+                android:id = "@+id/toolname"
+                android:text="يرجى اختيار العناصر التي تريد إرجاعها"
+                android:textColor="#D8A664"
+                android:textSize="@dimen/_11sdp" />
+            <FrameLayout
+                android:id="@+id/wishList"
+                android:layout_width="@dimen/_26sdp"
+                android:layout_height="@dimen/_26sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY">
+
+
+
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/productListBadgeCount"
+                    android:layout_width="@dimen/_14sdp"
+                    android:layout_height="@dimen/_14sdp"
+                    android:layout_gravity="top|end|right"
+                    android:background="@drawable/noti_bedge2"
+                    android:gravity="center"
+                    android:text="99"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    android:visibility="gone" />
+
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/serachbar"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_alignParentLeft="true"
+
+                android:layout_centerVertical="true"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_filter_profile" />
+
+            <ImageView
+                android:id="@+id/backarrow"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="0.50"
+                android:rotation="180"
+                android:gravity="center_horizontal"
+                android:src="@drawable/ic_leftarrowlat" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <LinearLayout
+        android:id="@+id/returnOrderContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.8">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/returnOrderRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:orientation="vertical"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_weight="1.8">
+
+                    <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                        android:id="@+id/returnOrderCommentBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/addressgreybackground"
+                        android:gravity="right"
+                        android:hint="تعليق (اختياري)"
+                        android:maxLength="200"
+                        android:padding="@dimen/_8sdp"
+                        android:textDirection="rtl"
+                        android:textSize="@dimen/_12sdp"></com.eoutlet.Eoutlet.customview.HalveticRegularEditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.5"
+                    android:gravity="right">
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                        android:id="@+id/termsAndConditionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="أوافق على سياسة الإسترجاع"
+                        android:textDirection="rtl"
+                        android:textSize="@dimen/_12sdp">
+
+                    </com.eoutlet.Eoutlet.customview.HelveticaRegularTextView>
+
+                    <CheckBox
+                        android:id="@+id/returnPolicyCheckBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_8sdp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:layout_marginBottom="@dimen/_4sdp"
+                    android:layout_weight="0.8"
+                    android:gravity="center">
+
+                    <FrameLayout
+                        android:id="@+id/returnOrderSubmitButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_mapbutton">
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="إرسال"
+                            android:textColor="#fff"
+                            android:textSize="18sp" />
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

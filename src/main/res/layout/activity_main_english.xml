@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+          <include layout="@layout/common_toolbar"
+                 android:visibility="gone"
+
+              />
+
+
+    <com.eoutlet.Eoutlet.activities.NoSwipePager
+        android:id="@+id/mainviewPager"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="60dp"
+        android:layout_height="match_parent"
+        tools:background="#EFEFEF"/>
+
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+
+    android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:backgroundTint="#E6E6E6
+"
+        app:labelVisibilityMode="labeled"
+
+        app:itemTextColor="@color/bottom_navigation_colour"
+
+        app:menu="@menu/navigationenglish"
+
+        app:itemBackground="@drawable/drawer_item_selected"/>
+
+    <!--android:backgroundTint="@color/white"-->
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

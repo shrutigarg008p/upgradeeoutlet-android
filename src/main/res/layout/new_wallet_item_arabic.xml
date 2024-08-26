@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_4sdp"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cartItemContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        card_view:cardElevation="7dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:padding="@dimen/_4sdp">
+
+            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+                android:id="@+id/latamount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:paddingRight="@dimen/_4sdp"
+                android:text="قيمة الطلب"
+                android:textColor="@color/colorPrimarytext"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+                android:id="@+id/latdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/latamount"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:paddingRight="@dimen/_4sdp"
+                android:text="قيمة الطلب"
+                android:textColor="#686E7F"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+                android:id="@+id/latorderid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="قيمة الطلب"
+                android:textColor="#D8A664"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/latorderid"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:text="action"
+                android:textColor="@color/success"
+                android:textSize="@dimen/_10sdp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

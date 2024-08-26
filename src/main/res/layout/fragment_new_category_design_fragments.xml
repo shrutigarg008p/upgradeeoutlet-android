@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/categoryContainer"
+    android:orientation="vertical"
+    tools:context=".fragments.NewCategoryDesignFragments">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentTop="true"
+            android:background="#F1F1F1"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true">
+
+                    <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                        android:id="@+id/toolbar_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textColor="@color/colour_black"
+                        android:textSize="@dimen/_11sdp" />
+
+
+                    <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                        android:id="@+id/toolbar_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textColor="#D8A664"
+                        android:textSize="@dimen/_11sdp" />
+                </LinearLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/wishList"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:scaleType="fitXY">
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_17sdp"
+                        android:layout_height="@dimen/_17sdp"
+                        android:layout_gravity="left|center_vertical"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/productdetailheart" />
+
+                    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:id="@+id/categorywishListBadgeCount"
+                        android:layout_width="@dimen/_14sdp"
+                        android:layout_height="@dimen/_14sdp"
+                        android:layout_gravity="top|end|right"
+                        android:background="@drawable/noti_bedge2"
+                        android:gravity="center"
+                        android:text="99"
+                        android:textSize="@dimen/_8sdp"
+                        android:textColor="@color/white"
+                        android:visibility="gone" />
+
+
+                </FrameLayout>
+
+
+
+
+                <ImageView
+                    android:id="@+id/serachbar"
+                    android:layout_width="@dimen/_13sdp"
+
+                    android:layout_height="@dimen/_13sdp"
+
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/wishList"
+
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_filter_profile" />
+
+                <ImageView
+                    android:id="@+id/backarrow"
+                    android:layout_width="@dimen/_18sdp"
+                    android:visibility="gone"
+
+                    android:layout_height="@dimen/_8sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+
+
+                    android:src="@drawable/ic_backarrow" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/toptabscategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:scrollbars="vertical" />
+    </LinearLayout>
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/new_arrival_home_layout"
+            android:layout_marginTop="@dimen/_13sdp"
+
+
+            android:id ="@+id/new_arrival_home_recycler"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_weight="0.70">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical"
+
+
+            >
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/leftsidecategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+               />
+        </LinearLayout>
+    <include layout="@layout/left_category_adapter"
+        android:visibility="gone"
+        android:id="@+id/categorybrands"/>
+
+</LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1.30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_8sdp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rightsidebannercategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/_8sdp"
+
+
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rightsidecategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           />
+    </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>

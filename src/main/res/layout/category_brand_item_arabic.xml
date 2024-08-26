@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="2"
+    android:padding="@dimen/_10sdp"
+    android:background="@drawable/rectangular_border_corner2"
+
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginRight="@dimen/text_size_eng"
+    android:id="@+id/parentLayout"
+
+    android:orientation="horizontal">
+    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="VIEW"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        android:padding="@dimen/_4sdp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center"
+
+        android:background="@color/colorPrimary"
+        android:layout_weight="0.6"/>
+<com.eoutlet.Eoutlet.customview.MulishBoldTextView
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:text="ALVIERO MARTINI"
+    android:textColor="#000000"
+    android:id="@+id/bannername"
+    android:gravity="right"
+    android:layout_gravity="center_vertical"
+    android:textSize="@dimen/_10sdp"
+    android:layout_weight="1.4"/>
+
+
+
+</LinearLayout>

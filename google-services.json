@@ -1,0 +1,64 @@
+{
+  "project_info": {
+    "project_number": "196093030085",
+    "firebase_url": "https://eoutlet-a712e.firebaseio.com",
+    "project_id": "eoutlet-a712e",
+    "storage_bucket": "eoutlet-a712e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:196093030085:android:5d8f7e97ffbe311370caac",
+        "android_client_info": {
+          "package_name": "com.eoutlet.eoutlet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "196093030085-797pqsfc128st4s76mbmselkrt1l59dp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eoutlet.eoutlet",
+            "certificate_hash": "b59e1431f2554fcd914f66d9c92a2003b4e2b59a"
+          }
+        },
+        {
+          "client_id": "196093030085-qtoru2e4jr8hcnghcguk4ac8vfkmah1f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.eoutlet.eoutlet",
+            "certificate_hash": "d2732cec38035029081d0fd4190c6c58cb130dad"
+          }
+        },
+        {
+          "client_id": "196093030085-iajfu0al8ffah36qansm5f9hekbjgqau.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApRvnU-krQMp32QAIprWLgXxZyfsoJ854"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "196093030085-613o3v7svhd61vi0t3kdjjhg8qonrmgh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "196093030085-arcr303iss76crgs59s76eq700b43mnp.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.eoutlet.Eoutlet",
+                "app_store_id": "1484601181"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

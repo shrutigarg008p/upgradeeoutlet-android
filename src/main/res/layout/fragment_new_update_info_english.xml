@@ -1,0 +1,674 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/updateInfoContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+
+    android:clickable="true"
+    tools:context=".activities.MainActivity">
+
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_alignParentTop="true"
+        android:background="#FFFFFF"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:layout_marginRight="@dimen/_15sdp">
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="My Profile/Details "
+                android:textColor="#D8A664"
+                android:textSize="@dimen/_11sdp" />
+
+            <ImageView
+                android:id="@+id/serachbar"
+                android:layout_width="@dimen/_13sdp"
+                android:layout_height="@dimen/_13sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_filter_profile" />
+
+
+                <ImageView
+                    android:id="@+id/backarrow"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.50"
+                    android:gravity="center_horizontal"
+                    android:src="@drawable/ic_leftarrowlat" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <ScrollView
+        android:id="@+id/scrollContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_17sdp"
+
+            android:orientation="vertical"
+            android:paddingBottom="30dp">
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                android:id="@+id/fullName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+
+
+
+                android:textColor="#1A1824"
+                android:textSize="@dimen/_18sdp"
+                android:visibility="visible" />
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                android:id="@+id/address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullName"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+
+
+                android:textColor="#77838F"
+                android:textSize="@dimen/_15sdp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/firstnamelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/product_detail_padding"
+
+                android:padding="8dp">
+                <!--  android:background="@drawable/edittext_background"-->
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/firstNametitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="First Name"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.HalveticBoldEditText
+                    android:id="@+id/updatefirstName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/firstNametitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:inputType="text"
+                    android:text="First Name"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:hint="First Name"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/editfirstname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
+                    android:text="Edit"
+
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/maintextsize"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/lastnamelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/firstnamelayout"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:layout_marginRight="@dimen/product_detail_padding"
+
+
+                android:padding="8dp">
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/updatelastNametitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Last Name"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.HalveticBoldEditText
+                    android:id="@+id/updatelastName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatelastNametitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:inputType="text"
+                    android:text="Last Name"
+                    android:hint="Last Name"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/editlastname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Edit"
+                    android:textColor="@color/colorPrimary"
+
+                    android:textSize="@dimen/maintextsize"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/maillayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lastnamelayout"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:layout_marginRight="@dimen/product_detail_padding"
+
+                android:padding="8dp">
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/updateeMailtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Email"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.HalveticBoldEditText
+                    android:id="@+id/updateeMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updateeMailtitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:text="Email"
+                    android:hint="Email"
+
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/editemail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Edit"
+                    android:textColor="@color/colorPrimary"
+
+                    android:textSize="@dimen/maintextsize"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/celcodeayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lastnamelayout"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:layout_marginRight="@dimen/product_detail_padding"
+
+                android:padding="8dp">
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/updatecelcodetitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Country"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatecelcodetitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="5dp">
+
+                    <Spinner
+                        android:id="@+id/countrycodeSpinner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_below="@+id/updatecelcodetitle"
+                        android:layout_alignParentLeft="true"
+
+                        android:layout_gravity="center_vertical"
+                        android:background="@android:color/transparent"
+
+                        android:gravity="left"
+                        android:popupTheme="@style/PopupBackGround"
+
+                        android:spinnerMode="dialog"
+                        android:textColor="@android:color/black" />
+
+
+                    <com.eoutlet.Eoutlet.customview.HalveticBoldEditText
+                        android:id="@+id/updatecelcode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="24dp"
+                        android:layout_below="@+id/updatecelcodetitle"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="5dp"
+                        android:background="@null"
+                        android:hint="Country"
+                        android:inputType="text"
+
+
+                        android:textColor="#1A1824"
+                        android:textSize="@dimen/maintextsize"
+
+                        android:visibility="visible" />
+
+                </FrameLayout>
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/editcelcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Edit"
+                    android:textColor="@color/colorPrimary"
+
+                    android:textSize="@dimen/maintextsize"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/mobilelayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/maillayout"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:layout_marginRight="@dimen/product_detail_padding"
+
+                android:padding="8dp">
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/updatemobiletitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Mobile"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.HalveticBoldEditText
+                    android:id="@+id/updatemobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/updatemobiletitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:hint="Please enter mobile number"
+                    android:inputType="number"
+                    android:maxLength="15"
+                    android:textColor="#1A1824"
+
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/editmobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Edit"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/maintextsize"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/maillayout"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/_17sdp"
+                android:layout_marginRight="@dimen/product_detail_padding"
+                android:gravity="center"
+                android:padding="8dp">
+
+                <CheckBox
+                    android:id="@+id/newsLetterCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_5sdp">
+                </CheckBox>
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Newsletter Subscription"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                android:id="@+id/updateProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/margin_top"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/margin_top"
+                android:background="@drawable/red_rectangle"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="Update Profile"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mobilelayout"
+
+                android:layout_marginLeft="@dimen/margin_top"
+
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_top"
+                android:background="@drawable/red_rectangle"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="تحديث بيانات الحساب"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size"
+                android:visibility="gone" />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id = "@+id/changepasswordUI"
+    android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/oldpasswordlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/product_detail_padding"
+
+                android:padding="8dp">
+                <!--  android:background="@drawable/edittext_background"-->
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/oldpasswordtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="New Password"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.HalveticBoldEditText
+                    android:id="@+id/oldPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/oldpasswordtitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="Please enter new password"
+                    android:inputType="text"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/editoldpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
+                    android:text="Edit"
+
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/maintextsize"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/newpasswordlayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/address"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/product_detail_padding"
+
+                android:padding="8dp">
+                <!--  android:background="@drawable/edittext_background"-->
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/newpasswordtitletitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:text="Confirm Password"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.HalveticBoldEditText
+                    android:id="@+id/newPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/newpasswordtitletitle"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginTop="5dp"
+                    android:background="@null"
+                    android:enabled="false"
+                    android:hint="Please enter confirm password "
+                    android:inputType="text"
+                    android:textColor="#1A1824"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="visible" />
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/editnewpassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
+                    android:text="Edit"
+
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/maintextsize"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/product_detail_padding"
+                android:background="@drawable/edittext_background"
+                android:gravity="center_horizontal"
+                android:hint="كلمة السر الجديدة"
+                android:padding="@dimen/_17sdp"
+                android:singleLine="true"
+                android:textColor="#1A1824"
+                android:textColorHint="#1A1824"
+
+                android:textSize="@dimen/maintextsize"
+                android:visibility="gone"
+
+
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/et_hint"
+                android:visibility="gone" />
+
+            <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/product_detail_padding"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/product_detail_padding"
+                android:background="@drawable/edittext_background"
+
+                android:gravity="center_horizontal"
+                android:hint="تأكيد كلمة المرور الجديدة"
+                android:padding="@dimen/_17sdp"
+                android:singleLine="true"
+                android:textColor="#1A1824"
+
+                android:textColorHint="#1A1824"
+
+                android:textSize="@dimen/maintextsize"
+                android:visibility="gone"
+
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/et_hint"
+                android:visibility="gone" />
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                android:id="@+id/saveNewPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_top"
+                android:background="@drawable/red_rectangle"
+                android:gravity="center"
+                android:padding="@dimen/_4sdp"
+                android:text="Change the Password"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"/>
+
+            <EditText
+                android:id="@+id/confirmNewpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:gravity="center_horizontal"
+                android:hint="رقم الجوال"
+                android:inputType="phone"
+                android:padding="@dimen/et_padding"
+                android:singleLine="true"
+                android:textColor="@color/colour_black"
+                android:textColorHint="@color/et_hint"
+                android:visibility="gone"
+
+                />
+</LinearLayout>
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/et_hint"
+                android:textColor="@color/colour_black"
+
+                android:visibility="gone" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

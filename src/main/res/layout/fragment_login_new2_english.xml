@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1F1F1"
+    android:orientation="vertical"
+    android:clickable="true"
+
+    tools:context=".activities.MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="@dimen/margin_top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/main_icon2"
+                android:layout_height="@dimen/main_icon2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_top"
+
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_elogo"
+                android:visibility="gone" />
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_gravity="center"
+
+
+
+                    android:src="@drawable/logo_english_black" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="الأعضاء المسجلين"
+                android:textColor="@color/et_hint"
+                android:textSize="@dimen/text_size"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/tabmargintop"
+                android:visibility="gone">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.7dp"
+                    android:background="#959DAD" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                android:id= "@+id/strip"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--<TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btn_signin"
+                        android:text="SIGN IN"
+                        android:textSize="@dimen/textsize"
+                        android:textColor="#454F63"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="3dp"
+                        android:layout_marginTop="3dp"
+                        android:background="@color/background"/>-->
+                    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:id="@+id/btn_signin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="@dimen/_9sdp"
+                        android:textAllCaps="false"
+                        android:text="Login"
+                        android:textColor="#6C8A26" />
+
+                    <include
+                        layout="@layout/indicator_strip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0.9dp"
+                    android:layout_height="match_parent"
+
+                    android:background="#959DAD" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    <!--
+                                <TextView
+                                    android:id="@+id/btn_signup"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="3dp"
+                                    android:layout_marginTop="3dp"
+                                    android:textSize="@dimen/textsize"
+                                    android:background="@color/background"
+                                    android:text="SIGN UP"
+                                    android:textColor="#959DAD"
+                                    />-->
+                    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:id="@+id/btn_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:padding="@dimen/_9sdp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Register"
+                        android:textColor="#6C8A26" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_45sdp"
+                    android:elevation="@dimen/_3sdp"
+                    app:cardBackgroundColor="#FFFFFFFF"
+                    app:cardElevation="@dimen/_3sdp"
+                    app:cardUseCompatPadding="true">
+
+                    <RadioGroup
+                        android:id="@+id/toggle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@color/white"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <com.eoutlet.Eoutlet.customview.MyMulishRadioButton
+                            android:id="@+id/getotp"
+                            style="@style/MyCustomRadioButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Login with OTP"
+                            android:textSize="@dimen/_8sdp"
+                            android:textStyle="bold" />
+
+
+                        <com.eoutlet.Eoutlet.customview.MyMulishRadioButton
+                            android:id="@+id/btnemail"
+                            style="@style/MyCustomRadioButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_weight="1"
+                            android:text="Login with Email"
+                            android:textSize="@dimen/_8sdp"
+                            android:textStyle="bold" />
+
+                        <com.eoutlet.Eoutlet.customview.MyMulishRadioButton
+                            android:id="@+id/btnmobile"
+                            style="@style/MyCustomRadioButton"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Login with Mobile"
+                            android:textSize="@dimen/_8sdp"
+                            android:textStyle="bold" />
+
+                    </RadioGroup>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/emailView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <!--
+                                <EditText
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="البريد الإلكتروني"
+                                    android:singleLine="true"
+                                    android:gravity="center_horizontal"
+                                    android:inputType="textEmailAddress"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginRight="30dp"
+
+                                    android:background="@drawable/edittext_background"
+
+
+                                    android:textColor="@color/colour_black"
+                                    android:layout_marginTop="@dimen/margin_top"
+                                    android:id="@+id/userName"
+                                    android:padding="@dimen/et_padding"
+
+
+                                    />-->
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/et_hint"
+                    android:visibility="gone" />
+            </LinearLayout>
+            <FrameLayout
+                android:id="@+id/FrameLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/logo_height"
+                android:visibility="gone"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="@dimen/margin_top"
+                >
+
+                <com.facebook.login.widget.LoginButton
+                    android:id="@+id/fbsignin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/fb"
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/fb_corner"
+                    android:text="Signin with Facebook"
+                    android:textAllCaps="false"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+                    android:padding="6dp"
+
+                    android:drawableLeft="@drawable/ic_facebook_circle"
+                    />
+
+
+                />
+
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/logo_height"
+                android:gravity="center_horizontal"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="horizontal"
+                android:visibility="gone">
+                <com.facebook.login.widget.LoginButton
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp" />
+            </LinearLayout>
+
+            <!-- <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="@dimen/logo_height"
+                 android:layout_marginLeft="20dp"
+                 android:layout_marginRight="20dp"
+                 android:background="@drawable/fb_corner"
+                 android:layout_marginTop="20dp">
+                 <ImageView
+                     android:layout_width="20dp"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_marginLeft="20dp"
+                     android:src="@drawable/ic_facebook"/>
+                 <com.facebook.login.widget.LoginButton
+                     android:id="@+id/fbsignin"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/logo_height"
+                     android:clickable="true"
+
+                     android:layout_gravity="center_horizontal"
+                     android:gravity="center"
+
+                     android:text="Signin with Facebook"
+                     android:textColor="@color/white"
+
+                     android:textSize="@dimen/maintextsize" />
+
+
+             </LinearLayout>-->
+
+
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+
+
+                android:background="@drawable/google_corner"
+                >
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/_28sdp"
+                    android:visibility="gone"
+
+
+
+                    />
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularButton
+                    android:id="@+id/googlelogin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/_28sdp"
+
+                    android:background="@drawable/google_corner"
+                    android:drawableLeft="@drawable/ic_google"
+                    android:text="Continue with Google"
+                    android:textAllCaps="false"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:paddingLeft="@dimen/_50sdp"
+                    android:paddingRight="@dimen/_50sdp"
+
+
+
+                    />
+
+
+            </FrameLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/logo_height"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+
+
+
+                android:background="@drawable/google_corner"
+
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:visibility="gone"
+
+                    android:src="@drawable/ic_google"/>
+
+
+                <com.google.android.gms.common.SignInButton
+
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="@dimen/logo_height"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/maintextsize"
+                    android:text="Signin with Google"
+
+                    />
+
+
+
+                <!-- <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                     android:id="@+id/googlesignin"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/logo_height"
+                     android:layout_gravity="center_horizontal"
+
+                     android:gravity="center"
+                     android:text="Signin with Google"
+                     android:textColor="#000000"
+
+                     android:textSize="@dimen/maintextsize" />-->
+            </LinearLayout>
+
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="signout"
+                android:clickable="true"
+                android:visibility="gone"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/googlesignout"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/logo_height"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/twitter_corner"
+
+                android:layout_marginRight="20dp"
+
+
+                >
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+
+                    android:src="@drawable/ic_twitter5"/>
+
+                <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                    android:id="@+id/twittersignin"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/logo_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+
+                    android:clickable="true"
+
+
+                    android:gravity="center"
+                    android:text="Signin with Twitter"
+                    android:textColor="@color/white"
+
+                    android:textSize="@dimen/maintextsize" />
+            </LinearLayout>
+
+
+            <FrameLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_28sdp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="10dp"
+
+                >
+
+                <com.twitter.sdk.android.core.identity.TwitterLoginButton
+                    android:id="@+id/twitter_login_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_28sdp"
+
+
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"/>
+
+
+
+                <Button
+
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/twitter_corner"
+                    android:text="Continue with Twitter"
+                    android:visibility="gone"
+
+                    android:padding="6dp"
+
+                    android:drawableLeft="@drawable/ic_twitter"
+                    android:textAllCaps="false"
+                    android:textColor="#fff"
+                    android:textStyle="bold" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/FrameLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/logo_height"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularButton
+                    android:id="@+id/applesignin"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/apple_background"
+                    android:textAllCaps="false"
+                    android:clickable="true"
+                    android:paddingLeft="@dimen/_50sdp"
+                    android:paddingRight="@dimen/_50sdp"
+                    android:text="Continue with Apple"
+                    android:textColor="#ffffff"
+                    android:textStyle="bold"
+
+
+                    android:drawableLeft="@drawable/ic_apple"
+                    />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/veryfybymobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight=".28"
+
+
+                    android:background="@drawable/spinner_background"
+                    android:orientation="horizontal">
+
+                    <Spinner
+                        android:id="@+id/countrycodeSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        android:layout_gravity="center_vertical|left"
+                        android:background="@android:color/transparent"
+                        android:gravity="left"
+
+
+                        android:popupTheme="@style/PopupBackGround"
+
+
+                        android:spinnerMode="dialog"
+                        android:textColor="@android:color/black" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="8dp"
+
+
+                        android:src="@drawable/dropdown" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="8dp"
+                        android:src="@drawable/ic_country" />
+
+                </RelativeLayout>
+
+
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                    android:id="@+id/edtmobilrnumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="@dimen/text_size"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/edittext_background"
+                    android:drawableRight="@drawable/signup_phone"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:gravity="left|center_vertical"
+
+                    android:hint="
+Mobile number"
+
+
+                    android:inputType="number"
+                    android:paddingLeft="8dp"
+
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colour_black"
+
+
+                    android:textSize="@dimen/maintextsize"
+
+
+                    />
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dip"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"
+                    android:background="@color/et_hint"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loginLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                    android:id="@+id/userName"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="@dimen/text_size"
+                    android:background="@drawable/edittext_background"
+                    android:drawableRight="@drawable/ic_icon"
+                    android:drawablePadding="@dimen/_4sdp"
+                    android:gravity="center_vertical|left"
+                    android:hint="
+E-mail"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="8dp"
+                    android:paddingRight="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/colour_black"
+                    android:textSize="@dimen/maintextsize"
+                    android:visibility="gone"
+
+
+                    />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp"
+                    android:id="@+id/passwordfullframe"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/text_size">
+
+
+                    <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                        android:id="@+id/userPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/edittext_background"
+                        android:drawablePadding="@dimen/_4sdp"
+
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:gravity="center_vertical|left"
+
+                        android:singleLine="true"
+
+
+                        android:textColor="@color/colour_black"
+
+                        android:textSize="@dimen/maintextsize"
+                        android:visibility="gone"
+
+
+                        />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_15sdp"
+
+                        android:clickable="true"
+                        android:id="@+id/passwordshowimg"
+                        android:src="@drawable/showpass"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="right|center_vertical"
+                        android:paddingRight="8dp"
+                        />
+
+
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularEdittext
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/edittext_background"
+
+                android:gravity="center_horizontal"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="@dimen/et_padding"
+
+                android:singleLine="true"
+                android:textColor="@color/colour_black"
+                android:visibility="gone"
+
+                />
+
+            <View
+                android:id="@+id/passworddivider"
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:background="@color/et_hint"
+                android:textColor="@color/colour_black"
+
+                android:visibility="gone" />
+
+            <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                android:id="@+id/loginClick"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/logo_height"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="50dp"
+
+
+                android:layout_marginRight="20dp"
+                android:background="@drawable/red_rectangle"
+                android:gravity="center"
+                android:text="Login With OTP"
+                android:textColor="@color/white"
+
+                android:textSize="@dimen/maintextsize" />
+
+            <LinearLayout
+                android:id="@+id/getotpui"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+
+
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="gone"
+                    android:weightSum="3"
+
+                    >
+
+                    <View
+                        android:layout_width="0dp"
+
+                        android:layout_height="0.1sp"
+
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1.4"
+                        android:background="@color/colour_black" />
+
+                    <TextView
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"
+
+                        android:gravity="center_horizontal"
+                        android:text="أو"
+
+                        android:textColor="@color/colour_black"
+                        android:textSize="@dimen/text_size_eng"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+
+                        android:layout_height="0.1dp"
+
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="1.4"
+                        android:background="@color/colour_black" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="@dimen/btn_width"
+                    android:layout_height="@dimen/btn_height"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/black_triangle"
+
+                    android:gravity="center"
+                    android:text="The Prosecutor's Office request"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size"
+
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                android:id="@+id/forgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:text="Forgot your password?"
+                android:textColor="@color/colorPrimary"
+
+
+                android:textSize="@dimen/text_size_eng"
+
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:visibility="gone"
+
+
+                >
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/acc1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="
+I do not have an existing account?"
+                    android:textColor="@color/et_hint"
+                    android:textSize="@dimen/text_size_eng"
+
+
+                    />
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Create an account"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_eng"
+
+
+                    />
+
+            </LinearLayout>
+
+
+
+
+            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                android:id="@+id/HelpSupport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:text="@string/termsandconditionsenglish"
+
+
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size"
+                android:visibility="visible" />
+
+            <!--  <View
+                  android:layout_width="80dp"
+                  android:layout_height="1dp"
+
+                  android:layout_gravity="center_horizontal"
+                  android:background="@color/colorPrimary"/>-->
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

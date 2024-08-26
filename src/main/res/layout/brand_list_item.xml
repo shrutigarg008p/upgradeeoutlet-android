@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/et_padding"
+        android:background="@color/white"
+        android:backgroundTint="@color/white"
+        android:weightSum="4"
+        android:id="@+id/rowhit"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:visibility="invisible"
+
+
+            >
+
+            <ImageView
+                android:id="@+id/brandlogo"
+                android:layout_width="@dimen/main_icon"
+                android:layout_height="@dimen/main_icon2"
+                android:padding="1dp"
+                android:scaleType="fitXY"
+
+                android:background="@drawable/rectangular_border2"
+
+
+                 />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center|right"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="Calvin Clien"
+                android:id="@+id/brandtext"
+
+                android:textColor="@color/colour_black"
+                android:textSize="@dimen/text_size_eng" />
+        </LinearLayout>
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:src = "@drawable/ic_keyboard_arrow_right_black_24dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/colour_black"/>
+</LinearLayout>

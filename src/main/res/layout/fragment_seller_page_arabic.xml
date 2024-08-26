@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sellerFrameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.SellerPage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F9F9F9"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFFF"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp">
+
+                <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                    android:id="@+id/toolbarText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:text="بائع "
+                    android:textColor="#D8A664"
+                    android:textSize="@dimen/_11sdp" />
+
+                <ImageView
+                    android:id="@+id/serachbar"
+                    android:layout_width="@dimen/search_image_width"
+                    android:layout_height="@dimen/search_image_width"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_filter_profile" />
+
+                <ImageView
+                    android:id="@+id/backarrow"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.50"
+                    android:gravity="center_horizontal"
+                    android:rotation="180"
+                    android:src="@drawable/ic_leftarrowlat" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/sellerLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/rounded_corner_shape"
+                    android:clipToPadding="false"
+                    android:divider="@android:color/transparent"
+                    android:elevation="@dimen/_5sdp"
+                    app:cardCornerRadius="@dimen/_3sdp"
+                    app:cardElevation="@dimen/_5sdp"
+                    app:cardPreventCornerOverlap="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/_10sdp"
+                        android:weightSum="2">
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:orientation="vertical">
+
+                            <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                                android:id="@+id/sellerAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:gravity="left"
+                                android:text="Sahafah, Olaya St. 6531, 3059 Riyadh 13321 Saudi Arabia"
+                                android:textSize="@dimen/_8sdp">
+
+                            </com.eoutlet.Eoutlet.customview.HelveticaRegularTextView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_gravity="center"
+                                android:gravity="center_vertical">
+
+                                <RatingBar
+                                    style="?android:attr/ratingBarStyleSmall"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:numStars="1"
+                                    android:rating="1"
+                                    android:visibility="gone" />
+
+                                <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Rating : "
+                                    android:textSize="@dimen/_10sdp" />
+
+                                <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                                    android:id="@+id/sellerRating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="4.5"
+                                    android:textSize="@dimen/_10sdp">
+
+                                </com.eoutlet.Eoutlet.customview.HelveticaRegularTextView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:orientation="vertical">
+
+                                <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+                                    android:id="@+id/sellerName"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:maxLines="1"
+                                    android:text="Eoutlet"
+                                    android:textSize="@dimen/_12sdp"></com.eoutlet.Eoutlet.customview.HelveticaBoldTextView>
+
+                                <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                                    android:id="@+id/sellerEmail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="right"
+                                    android:singleLine="true"
+                                    android:text="eoutlet@gmail.com"
+                                    android:textSize="@dimen/_6sdp"
+                                    android:visibility="gone">
+
+                                </com.eoutlet.Eoutlet.customview.HelveticaRegularTextView>
+                            </LinearLayout>
+
+                            <!--                            <androidx.cardview.widget.CardView-->
+                            <!--                                android:id="@+id/sellerCard"-->
+                            <!--                                android:layout_width="@dimen/_30sdp"-->
+                            <!--                                android:layout_height="@dimen/_30sdp"-->
+
+                            <!--                                android:layout_centerHorizontal="true"-->
+                            <!--                                android:elevation="@dimen/_2sdp"-->
+                            <!--                                android:innerRadius="0dp"-->
+                            <!--                                android:shape="ring"-->
+                            <!--                                app:cardCornerRadius="@dimen/_30sdp">-->
+
+                            <ImageView
+                                android:id="@+id/sellerImage"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_alignParentTop="true"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center"
+                                android:scaleType="fitXY"></ImageView>
+                            <!--                            </androidx.cardview.widget.CardView>-->
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/sellerRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+</FrameLayout>

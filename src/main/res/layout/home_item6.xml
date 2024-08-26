@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_margin ="10dp"
+    android:backgroundTint="@color/white">
+  <LinearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@drawable/rectangular_border2"
+
+
+     >
+
+    <ImageView
+        android:layout_width="@dimen/main_icon"
+        android:layout_height="@dimen/main_icon2"
+        android:id="@+id/brandImage"
+        android:padding="2dp"
+
+        android:scaleType="fitXY"
+        android:adjustViewBounds="true"
+       />
+
+
+  </LinearLayout>
+
+</LinearLayout>

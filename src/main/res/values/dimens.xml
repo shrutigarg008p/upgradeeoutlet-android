@@ -1,0 +1,99 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="main_icon">120dp</dimen>
+    <dimen name="main_icon2">80dp</dimen>
+    <dimen name="margin_top">30dp</dimen>
+    <dimen name="text_size">20dp</dimen>
+    <dimen name="et_padding">12dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="btn_width">280dp</dimen>
+    <dimen name="text_size_eng">15dp</dimen>
+    <dimen name="card_number">14dp</dimen>
+    <dimen name="img_width">231dp</dimen>
+    <dimen name="img_height">188dp</dimen>
+    <dimen name="margin_bottom">60dp</dimen>
+    <dimen name="product_width">97dp</dimen>
+    <dimen name="product_width1">350dp</dimen>
+    <dimen name="home_bottom_product_height">280dp</dimen>
+    <dimen name="cart_item_padding">5dp</dimen>
+    <dimen name="product_height">170dp</dimen>
+    <dimen name="product_height2">400dp</dimen>
+    <dimen name="scroller_height">200dp</dimen>
+    <dimen name="product_height3">450dp</dimen>
+    <dimen name="product_height4">645dp</dimen>
+    <dimen name="selected_product_height">300dp</dimen>
+    <dimen name="size_btn_height">32dp</dimen>
+    <dimen name="size_btn_width">43dp</dimen>
+    <dimen name="list_item_size">14dp</dimen>
+    <dimen name="list_group_size">18dp</dimen>
+    <dimen name="serch_height">35dp</dimen>
+
+    <dimen name="homecard_width">220dp</dimen>
+    <dimen name="homecard_height">70dp</dimen>
+    <dimen name="man_width">180dp</dimen>
+    <dimen name="man_height">280dp</dimen>
+    <dimen name="bottom_item_width">137dp</dimen>
+    <dimen name="bottom_item_height">120dp</dimen>
+    <dimen name="item1_width">80dp</dimen>
+    <dimen name="item1_height">80dp</dimen>
+    <dimen name="slider_image_height">200dp</dimen>
+    <dimen name="offer_image_height">170dp</dimen>
+    <dimen name="catagory_image_height">210dp</dimen>
+
+    <dimen name="detail_size_recycler_margin">46dp</dimen>
+    <dimen name="padding_in_size_button">5dp</dimen>
+    <dimen name="padding_in_size_minace_button">5dp</dimen>
+    <dimen name="text_15">15dp</dimen>
+    <dimen name="text_25">25dp</dimen>
+
+
+    <dimen name="design_bottom_navigation_text_size" tools:override="true">9sp</dimen>
+    <dimen name="design_bottom_navigation_active_text_size" tools:override="true">9sp</dimen>
+
+    <dimen name="splash_left">-100dp</dimen>
+    <dimen name="splash_right">-100dp</dimen>
+    <dimen name="splash_top">-400dp</dimen>
+    <dimen name="splash_bottom">-400dp</dimen>
+    <dimen name="home_page_text">25dp</dimen>
+    <dimen name="product_detail_padding">20dp</dimen>
+
+    <dimen name="padding_in_cart_qty">20dp</dimen>
+
+    <dimen name="padding_cart_image">300dp</dimen>
+
+    <dimen name="padding_cart_right">5dp</dimen>
+
+    <dimen name="brand_height">50dp</dimen>
+
+    <dimen name="trending_product_dimension">120dp</dimen>
+
+    <dimen name="trending_product_height">130dp</dimen>
+    <dimen name="catagory_size">100dp</dimen>
+
+    <dimen name="item_offset">1dp</dimen>
+    <dimen name="product_width2">200dp</dimen>
+
+    <dimen name="payment_textmargin">60dp</dimen>
+    <dimen name="payment_text_size">17dp</dimen>
+
+
+    <dimen name="maintextsize">14dp</dimen>
+    <dimen name="logo_height">35dp</dimen>
+    <dimen name="radio_width">50dp</dimen>
+    <dimen name="radio_button">29dp</dimen>
+    <dimen name="back_image_width">15dp</dimen>
+    <dimen name="search_image_width">17dp</dimen>
+
+    <dimen name="card_image_width">35dp</dimen>
+
+    <dimen name="feature_height">300dp</dimen>
+    <dimen name="cart_product_height">170dp</dimen>
+    <dimen name="cart_desc_width">130dp</dimen>
+
+    <dimen name="cate_height">90dp</dimen>
+
+    <dimen name="twoitemheight">280dp</dimen>
+    <dimen name="tabmargintop">40dp</dimen>
+    <dimen name="pf_elements_top_space">20dp</dimen>
+    <dimen name="categore_banner_height">900dp</dimen>
+</resources>

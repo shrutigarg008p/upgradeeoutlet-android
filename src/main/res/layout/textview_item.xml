@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/textviewParent"
+    android:orientation="vertical">
+
+    <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+        android:id="@+id/expandedListItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+
+        android:textColor="#8E8E93"
+        android:padding="16dp"
+        android:text="ghvhbv"
+
+        android:layout_marginRight="30dp"
+        android:textSize="@dimen/_10sdp" />
+    <ImageView
+        android:layout_width="@dimen/list_item_size"
+        android:layout_height="@dimen/list_item_size"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:id="@+id/tick_imagecategory"
+        android:visibility="gone"
+        android:layout_marginLeft="@dimen/_8sdp"
+        android:src="@drawable/category_tick"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/expandedListItem"
+        android:id="@+id/expandviewline"
+        android:background="#8E8E93" />
+</RelativeLayout>

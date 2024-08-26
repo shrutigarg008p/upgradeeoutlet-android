@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".activities.MainActivity">
+
+
+    <android.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:visibility="gone"
+
+        android:background="@color/toolbar_color"
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+
+
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_canvas" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colour_black"
+                android:textStyle="bold"
+                android:visibility="gone"
+                android:textSize="@dimen/list_group_size"
+                android:text="دفتر العناوين"/>
+
+        </RelativeLayout>
+    </android.widget.Toolbar>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_top">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_top">
+            <!--     <ImageView
+                     android:layout_width="@dimen/main_icon2"
+                     android:layout_height="@dimen/main_icon2"
+
+                     android:layout_gravity="center_horizontal"
+                     android:layout_marginTop="@dimen/margin_top"
+                     android:src="@drawable/ic_elogo"/>
+
+                 <ImageView
+                     android:layout_width="@dimen/main_icon"
+                     android:layout_height="@dimen/main_icon2"
+                     android:layout_gravity="center_horizontal"
+                     android:scaleType="fitXY"
+                     android:layout_marginTop="10dp"
+
+
+
+                     android:src="@drawable/ic_canvas" />-->
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_top"
+
+
+
+                android:src="@drawable/component" />
+            <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الاسم الأول"
+
+                android:gravity="right"
+                android:layout_marginLeft="@dimen/margin_top"
+                android:layout_marginRight="@dimen/margin_top"
+                android:background="@drawable/edittext_background"
+                android:padding="8dp"
+                android:drawableLeft="@drawable/ic_name"
+
+                android:textColorHint="#ABB1C0"
+
+
+                android:textColor="@color/colour_black"
+                android:layout_marginTop="@dimen/margin_top"
+                android:singleLine="true"
+                android:id="@+id/savedfirstName"
+
+
+                />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:background="@color/et_hint"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+                android:layout_marginRight="30dp"/>
+
+            <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الكنية"
+                android:singleLine="true"
+                android:textColor="@color/colour_black"
+                android:layout_marginLeft="@dimen/margin_top"
+
+                android:layout_marginRight="@dimen/margin_top"
+                android:background="@drawable/edittext_background"
+
+                android:drawableLeft="@drawable/ic_name"
+                android:gravity="right"
+
+                android:textColorHint="#ABB1C0"
+                android:id="@+id/savedlastName"
+                android:padding="8dp"
+
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:background="@color/et_hint"
+                android:textColor="@color/colour_black"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+                android:layout_marginRight="30dp"/>
+
+            />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginLeft="30dp"
+
+                android:layout_marginRight="30dp"
+                android:layout_weight=".28"
+
+
+                android:background="@drawable/spinner_background"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/countrySpinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+
+                    android:layout_gravity="center_vertical"
+                    android:background="@android:color/transparent"
+
+
+                    android:popupTheme="@style/PopupBackGround"
+
+
+                    android:spinnerMode="dialog"
+                    android:textColor="@android:color/black" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:paddingRight="8dp"
+
+
+                    android:src="@drawable/dropdown" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:paddingLeft="8dp"
+                    android:src="@drawable/ic_country" />
+
+            </RelativeLayout>
+            <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                android:id="@+id/savedcity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:hint="مدينة"
+
+                android:padding="8dp"
+                android:layout_marginLeft="@dimen/margin_top"
+
+                android:layout_marginRight="@dimen/margin_top"
+                android:background="@drawable/edittext_background"
+
+                android:drawableLeft="@drawable/ic_country"
+                android:gravity="right"
+
+                android:textColorHint="#ABB1C0"
+                android:singleLine="true"
+                android:textColor="@color/colour_black"
+
+
+
+                />
+
+            <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                android:id="@+id/savedstreet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="اسم الحي"
+                android:padding="8dp"
+                android:singleLine="true"
+                android:layout_marginLeft="@dimen/margin_top"
+
+                android:layout_marginRight="@dimen/margin_top"
+                android:background="@drawable/edittext_background"
+
+                android:drawableLeft="@drawable/ic_country"
+                android:gravity="right"
+
+                android:textColorHint="#ABB1C0"
+
+                android:textColor="@color/colour_black"
+
+
+
+                />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:background="@color/et_hint"
+                android:textColor="@color/colour_black"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+
+                android:layout_marginRight="30dp"/>
+
+
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:background="@color/et_hint"
+                android:textColor="@color/colour_black"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+
+                android:layout_marginRight="30dp"/>
+
+            <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="بلد"
+                android:singleLine="true"
+                android:visibility="gone"
+                android:textColor="@color/colour_black"
+                android:layout_marginLeft="@dimen/margin_top"
+
+                android:layout_marginRight="@dimen/margin_top"
+                android:background="@drawable/edittext_background"
+
+                android:drawableLeft="@drawable/ic_country"
+                android:gravity="right"
+
+                android:textColorHint="#ABB1C0"
+                android:id="@+id/savedcountry"
+
+                android:padding="8dp"
+
+                />
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:background="@color/et_hint"
+                android:textColor="@color/colour_black"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+
+                android:layout_marginRight="30dp"/>
+
+            <!--      <Spinner
+                      android:id="@+id/countrySpinner"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginTop="10dp"
+
+                     android:padding="@dimen/et_padding"
+
+                      android:spinnerMode="dialog"
+                      android:layout_marginLeft="5dp"
+
+
+                      android:layout_marginRight="5dp"
+                      android:textColor="@android:color/black"
+                     />-->
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+
+                android:background="@color/et_hint"
+                android:textColor="@color/colour_black"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+
+                android:layout_marginRight="30dp"/>
+
+
+
+
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="0.5dip"
+                android:background="@color/et_hint"
+                android:textColor="@color/colour_black"
+                android:layout_marginLeft="30dp"
+                android:visibility="gone"
+
+                android:layout_marginRight="30dp"/>
+            <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                android:layout_width="@dimen/btn_width"
+                android:layout_height="@dimen/btn_height"
+                android:text="حفظ عنوان التسليم"
+                android:textSize="@dimen/text_15"
+                android:gravity="center"
+
+
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_top"
+                android:background="@drawable/red_rectangle"
+                android:id="@+id/btnsaveDelieveryAddress"
+                android:textColor="@color/white"
+                />
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

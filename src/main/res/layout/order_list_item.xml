@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<LinearLayout
+
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#EDEDED"
+
+
+
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/cartItemContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp"
+    card_view:cardUseCompatPadding="true"
+
+    card_view:cardElevation="15dp"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:layout_marginLeft="@dimen/_4sdp">
+
+        <LinearLayout
+            android:id="@+id/mainHeaderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_weight="1.5"
+
+                android:gravity="right"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:id="@+id/orderid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:maxLines="4"
+                    android:text="ORDER No :47899898"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_eng"
+                     />
+
+                <TextView
+                    android:id="@+id/totalamount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:maxLines="4"
+                    android:text="Total Amount:550 SAR"
+                    android:textColor="@color/et_hint"
+                    android:textSize="@dimen/text_size_eng"
+                     />
+
+                <TextView
+                    android:id="@+id/orderstatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:maxLines="4"
+                    android:text="Status:Pending"
+                    android:textColor="@color/et_hint"
+                    android:textSize="@dimen/text_size_eng"
+                   />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginTop="@dimen/margin_top"
+                    android:layout_marginBottom="@dimen/_8sdp"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+
+
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/textcancel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@color/et_hint"
+                        android:gravity="center"
+                        android:paddingLeft="1dp"
+                        android:paddingRight="1dp"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:text="الغاء الطلب
+"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/et_padding" />
+
+
+                    <TextView
+                        android:id="@+id/textreorder"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@color/et_hint"
+                        android:gravity="center"
+                        android:paddingLeft="1dp"
+                        android:paddingRight="1dp"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:text="اعادة الطلب"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/et_padding"/>
+
+
+                    <TextView
+                        android:id="@+id/textPreview"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/colorPrimary"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingLeft="1dp"
+                        android:paddingRight="1dp"
+                        android:paddingBottom="4dp"
+                        android:paddingTop="4dp"
+                        android:textStyle="bold"
+                        android:text="مشاهدة الطلب
+"                       android:textColor="@color/white"
+                        android:textSize="@dimen/et_padding" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/product_image"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="@dimen/_8sdp"
+                android:layout_weight="0.5"
+
+                android:src="@drawable/ic_shoping_bg" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/layoutChild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainHeaderView"
+            android:orientation="vertical"
+            android:visibility="gone"></LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
+</LinearLayout>

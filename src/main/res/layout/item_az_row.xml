@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/parentLayout"
+    android:orientation="vertical">
+
+        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ARMANI MARTINI"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:id="@+id/aztext"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:textSize="@dimen/_9sdp"
+            android:textColor="#77838F" />
+
+</LinearLayout>

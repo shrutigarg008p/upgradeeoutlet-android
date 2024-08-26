@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:id="@+id/whatsappcontainer"
+    android:clickable = "true"
+    tools:context=".fragments.ContactUsFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:background="#fff"
+
+            android:layout_height="70dp"
+
+            android:layout_alignParentTop="true" >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+                <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#D8A664"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:text="Call Us"/>
+
+                <ImageView
+                    android:id="@+id/serachbar"
+                    android:layout_width="@dimen/_12sdp"
+
+                    android:layout_height="@dimen/_12sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_filter_profile" />
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_20sdp"
+
+                    android:id="@+id/backarrow"
+                    android:padding="3dp"
+                    android:gravity="center_horizontal"
+                    android:layout_alignParentLeft="true"
+
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.25"
+
+                    android:src="@drawable/ic_leftarrowlat" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:visibility="gone"
+            android:background="@color/grey_colour"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/contacts"
+
+            android:weightSum="2" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/text_size"
+                android:id="@+id/linearWhatsapp"
+                android:background="@drawable/whatsappbackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_whatsapp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:textSize="15dp"
+                    android:singleLine="true"
+                    android:layout_marginBottom="5dp"
+
+                    android:textColor="@color/colour_black"
+                    android:text="WHATSAPP"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="@dimen/text_size"
+                android:id="@+id/linearCall"
+                android:background="@drawable/whatsappbackground"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="5dp"
+
+                    android:layout_gravity="center"
+                    android:src="@drawable/telephone"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="2dp"
+                    android:textSize="15dp"
+                    android:singleLine="true"
+                    android:layout_marginBottom="5dp"
+                    android:textColor="@color/colour_black"
+                    android:text="CALL"/>
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+        <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:gravity="left"
+
+            android:drawableRight="@drawable/ic_name"
+            android:id="@+id/edtname"
+            android:background="@drawable/edittext_background"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+
+            android:textColor="@color/colour_black"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+
+
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:visibility="gone"
+            android:background="@color/et_hint"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+
+        <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-mail"
+            android:id = "@+id/edt_email"
+            android:drawableRight="@drawable/ic_icon"
+
+            android:background="@drawable/edittext_background"
+            android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="left"
+            android:textColor="@color/colour_black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:singleLine="true"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="@dimen/text_size"
+
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:background="@color/et_hint"
+            android:visibility="gone"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"/>
+        <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile Number"
+
+        android:paddingRight="10dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/colour_black"
+
+            android:gravity="left"
+            android:drawableRight="@drawable/signup_phone"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/mobile"
+            android:paddingLeft="10dp"
+
+            android:layout_marginTop="@dimen/text_size"
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:background="@color/et_hint"
+            android:layout_marginLeft="30dp"
+            android:visibility="gone"
+            android:layout_marginRight="30dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:gravity="left"
+            android:background="@drawable/messagebackground"
+            android:textColor="@color/colour_black"
+            android:layout_marginTop="@dimen/text_size"
+            android:id="@+id/contactissue"
+            android:layout_marginLeft="30dp"
+            android:hint=""
+            android:padding="@dimen/_4sdp"
+
+            android:layout_marginRight="30dp"
+
+            />
+
+        <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:text="Send"
+            android:textSize="@dimen/text_size"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+
+            android:gravity="center"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/et_padding"
+            android:background="@drawable/red_rectangle"
+            android:id="@+id/signUp"
+            android:clickable="true"
+            android:textColor="@color/white"
+            />
+    </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">eoutlet</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_signup">SignupActivity</string>
+    <string name="title_activity_catagory1">Catagory1Activity</string>
+    <string name="title_activity_liva_data">LivaDataActivity</string>
+    <string name="title_activity_forgot_password">ForgotPassword</string>
+    <string name="title_activity_thankyou">ThankyouActivity</string>
+    <string name="title_activity_splash2">Splash2</string>
+    <string name="emailwithunderline"><u>البريد الإلكتروني</u></string>
+    <string name="mobilewithunderline"><u>رقم الجوال</u></string>
+    <string name="emailwithoutunderline">الدخول بالايميل</string>
+    <string name="mobilewithoutunderline">الدخول بالرقم  </string>
+
+    <string name="giftboxtext">Lorem ipsum , or lipsum is some times known is dummy text used in laying out print
+        graphic or web design</string>
+
+    <string name="viewgiftbox">إضافة بوكس الهدية</string>
+
+    <string name="addaddress"><u>  اضافة عنوان جديد +</u></string>
+
+    <string name="termsandconditions"><u>خدمة العملاء</u></string>
+
+    <string name="sizechart"><u>Size Chart</u></string>
+
+    <string name="sizechartarabic"><u>جدول المقاسات</u></string>
+
+    <string name="termsandconditionsenglish"><u>Help and Support</u></string>
+    <string name="title_activity_new_splash">NewSplashActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_order_payment_web_view">OrderPaymentWebViewActivity</string>
+    <!-- <string name="twitter_consumer_key" translatable="false">cmIme6Uo0SPLguj0WXS0HiWDt</string>
+    <string name="twitter_consumer_secret" translatable="false">Vix6wQes5xsyMvhU07t9Gxj1JOHetbPqFGytKU54XrtzXXfdZR</string>-->
+    <string name="twitter_consumer_key" translatable="false">Y1akS8oaeQJQfOoKTCtgiJ1KF</string>
+    <string name="twitter_consumer_secret" translatable="false">12o5EimT7IerGFb0eo2cBIASPN13XhAwqKvXHM9cojpxOTWkV8</string>
+
+    <string name="facebook_app_id">2852232741712357</string>
+    <string name="fb_login_protocol_scheme">fb2852232741712357</string>
+    <string name="title_activity_welcome_screen">WelcomeScreen</string>
+    <string name="title_activity_category_selection">CategorySelectionActivity</string>
+
+</resources>

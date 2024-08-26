@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginBottom="@dimen/_8sdp">
+
+    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+        android:id="@+id/productDetailsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_alignParentLeft="true"
+        android:maxLines="1"
+        android:text="Size: 9UK"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/colour_black"
+        android:textSize="@dimen/_10sdp" />
+</RelativeLayout>

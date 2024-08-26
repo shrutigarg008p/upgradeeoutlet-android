@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/loginContainer"
+    android:background="@color/white"
+
+    tools:context=".activities.LoginActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_top">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/margin_top">
+    <ImageView
+        android:layout_width="@dimen/main_icon2"
+        android:layout_height="@dimen/main_icon2"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_top"
+      />
+
+    <ImageView
+        android:layout_width="@dimen/main_icon"
+        android:layout_height="@dimen/main_icon2"
+        android:layout_gravity="center_horizontal"
+
+
+
+        android:src="@drawable/logotext" />
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textColor="@color/et_hint"
+    android:text="الأعضاء المسجلين"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/margin_top"
+    android:textSize="@dimen/text_size"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="البريد الإلكتروني"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:background="@android:color/transparent"
+        android:textColorHint="@color/et_hint"
+        android:textColor="@color/colour_black"
+        android:layout_marginTop="@dimen/margin_top"
+        android:id="@+id/userName"
+        android:padding="@dimen/et_padding"
+
+
+        />
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dip"
+        android:background="@color/et_hint"
+        android:layout_marginLeft="30dp"
+             android:layout_marginRight="30dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="كلمه السر"
+        android:background="@android:color/transparent"
+        android:id="@+id/password"
+        android:textColor="@color/colour_black"
+        android:gravity="center_horizontal"
+        android:textColorHint="@color/et_hint"
+        android:inputType="textPassword"
+        android:singleLine="true"
+        android:padding="@dimen/et_padding"
+
+        />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.5dip"
+        android:background="@color/et_hint"
+        android:textColor="@color/colour_black"
+        android:layout_marginLeft="30dp"
+
+        android:layout_marginRight="30dp"/>
+<TextView
+    android:layout_width="@dimen/btn_width"
+    android:layout_height="@dimen/btn_height"
+    android:text="تسجيل في"
+    android:textSize="@dimen/text_size"
+    android:gravity="center"
+    android:id="@+id/loginClick"
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="@dimen/margin_top"
+    android:background="@drawable/red_rectangle"
+
+    android:textColor="@color/white"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="هل نسيت كلمة المرور الخاصة بك؟"
+        android:id="@+id/forgotPassword"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textSize="@dimen/text_size"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:id="@+id/signup"
+
+        android:layout_marginTop="@dimen/margin_top"
+
+
+
+       >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/et_hint"
+            android:text="DO NOT HAVE AN ACCOUNT ?"
+            android:id="@+id/acc1"
+            android:textSize="15dp"
+            android:layout_marginLeft="@dimen/margin_top"
+
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorPrimary"
+            android:text= "SIGNUP"
+            android:textSize="15dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="@dimen/margin_top"
+            android:layout_toRightOf="@+id/acc1"
+
+
+
+
+          />
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="ساعد لدعم"
+        android:id="@+id/HelpSupport"
+
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_top"
+        android:textSize="@dimen/text_size"/>
+
+</LinearLayout>
+    </ScrollView>
+</LinearLayout>

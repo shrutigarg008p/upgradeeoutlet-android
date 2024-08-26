@@ -1,0 +1,105 @@
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/containertoolbar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+
+
+    <android.widget.Toolbar
+        android:id="@+id/common_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/toolbar_color"
+        android:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/tooltext"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+
+                android:layout_alignParentStart="true"
+
+                android:text="مرحبا"
+
+                android:textColor="@color/colour_black"
+                android:textSize="@dimen/text_size"
+
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="70dp"
+                android:layout_height="25dp"
+
+
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_canvas" />
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+
+                android:id="@+id/serachbar"
+                android:gravity="center_horizontal"
+
+                android:layout_centerVertical="true"
+                android:layout_weight="0.25"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_toolbarsearch" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight="0.25"
+
+
+
+                android:id="@+id/toolbarbag">
+
+
+                <!--<ImageView
+
+                    android:layout_width="20dp"
+                    android:layout_height="23dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_toolbar_bag" />-->
+
+
+                <include layout="@layout/toolbar_cart_bedge"
+
+                    />
+
+
+
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </android.widget.Toolbar>
+</FrameLayout>

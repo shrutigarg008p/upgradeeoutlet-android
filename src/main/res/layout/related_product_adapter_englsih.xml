@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginBottom="15dp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:background="@drawable/rounded_corner_shape"
+    >
+
+
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+
+            android:elevation="50dp">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/product_height"
+            android:id="@+id/man_image"
+            android:scaleType="fitXY"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:src="@drawable/shoe1"
+            />
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/list_item_size"
+        android:id="@+id/productname7"
+        android:text="afshashafshafshf"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:textStyle="bold"
+        android:textColor="@color/colour_black"
+        android:ellipsize="end"
+        android:maxLines="1"
+
+        android:layout_marginLeft="5dp"
+
+        android:layout_marginRight="5dp"
+
+        android:layout_marginBottom="5dp"
+
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal">
+        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+            android:id="@+id/newprice7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_centerVertical="true"
+            android:text="SAR 989"
+
+            android:layout_toLeftOf="@+id/oldprice7"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/maintextsize" />
+        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+            android:id="@+id/oldprice7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/cut_line"
+            android:text="SAR 1059"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+
+            android:textColor="#1E2022"
+
+
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+
+            android:textSize="@dimen/_10sdp" />
+
+
+
+
+    </RelativeLayout>
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_item_size"
+            android:text = "ds"
+
+            android:ellipsize="end"
+            android:maxLines="1"
+
+            android:id="@+id/oldprice7"
+            android:foreground="@drawable/cut_line"
+            android:textColor="#C0C0C0"
+           android:layout_alignParentLeft="true"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_item_size"
+
+            android:id="@+id/newprice7"
+
+            android:text = "sds"
+            android:layout_marginLeft="@dimen/text_size"
+            android:gravity="right"
+            android:ellipsize="end"
+            android:maxLines="1"
+
+
+
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorPrimary"/>
+
+
+    </RelativeLayout>-->
+</LinearLayout>

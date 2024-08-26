@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/category_background"
+    android:id="@+id/categorySelectionContainer"
+    android:orientation="vertical"
+    android:weightSum="2"
+    tools:context=".activities.CategorySelectionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.9">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_250sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/categorybanner"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/logo_english_black" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_15sdp"
+                    android:src="@drawable/categoryline" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:weightSum="4">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                                android:id="@+id/shopwomen"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/_15sdp"
+                                android:background="@drawable/ic_selectbtnbackground"
+                                android:gravity="center"
+                                android:text="SHOP WOMEN"
+                                android:textColor="@color/colour_black"
+                                android:textFontWeight="500"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                                android:id="@+id/shopmen"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/_15sdp"
+                                android:background="@drawable/ic_selectbtnbackground"
+                                android:gravity="center"
+                                android:text="SHOP MEN"
+                                android:textColor="@color/colour_black"
+                                android:textFontWeight="500"
+                                android:textSize="@dimen/_10sdp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                                android:id="@+id/shopchild"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/_15sdp"
+                                android:background="@drawable/ic_selectbtnbackground"
+                                android:gravity="center"
+                                android:text="SHOP CHILDREN"
+                                android:textColor="@color/colour_black"
+                                android:textFontWeight="500"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                                android:id="@+id/shopkids"
+                                android:layout_width="@dimen/_150sdp"
+                                android:layout_height="@dimen/_35sdp"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/_15sdp"
+                                android:background="@drawable/ic_selectbtnbackground"
+                                android:gravity="center"
+                                android:text="SHOP BABIES"
+                                android:textColor="@color/colour_black"
+                                android:textFontWeight="500"
+                                android:textSize="@dimen/_10sdp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

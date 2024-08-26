@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sellerProductContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:elevation="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp">
+
+                <ImageView
+                    android:id="@+id/wishListItemImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/wishlistDealText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:background="@color/colorPrimary"
+                    android:paddingLeft="@dimen/_8sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_8sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="DEAL"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="gone" />
+
+                <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                    android:id="@+id/wishlistOutOfStockText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:background="#FF617D"
+                    android:paddingLeft="@dimen/_4sdp"
+                    android:paddingTop="@dimen/_2sdp"
+                    android:paddingRight="@dimen/_4sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="OUT OF STOCK"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="gone" />
+
+                <ImageView
+                    android:id="@+id/removeWishListItem"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right"
+                    android:layout_margin="@dimen/_8sdp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/close_button_vector" />
+
+
+            </FrameLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                    android:id="@+id/wishListOptions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:maxLines="1"
+                    android:text="3 Option color"
+                    android:textAlignment="center"
+                    android:textColor="#999999"
+                    android:textSize="@dimen/_7sdp" />
+
+                <RatingBar
+                    android:id="@+id/wishListRatingBar"
+                    style="?android:attr/ratingBarStyleSmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:numStars="5"
+                    android:rating="3.5" />
+            </RelativeLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:src="@drawable/horizontalline"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:gravity="center_vertical"
+                android:paddingTop="@dimen/_3sdp"
+                android:paddingBottom="@dimen/_3sdp"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.1"
+                    android:orientation="vertical">
+
+                    <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                        android:id="@+id/wishListItemName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="@dimen/_3sdp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="Emporio Armani T-Shirt"
+                        android:textAlignment="center"
+                        android:textColor="@color/colour_black"
+                        android:textSize="@dimen/_8sdp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:gravity="center_vertical">
+
+                        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                            android:id="@+id/wishListItemOldPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:ellipsize="end"
+                            android:foreground="@drawable/cut_line"
+                            android:maxLines="1"
+                            android:text="999SAR"
+                            android:textColor="#666666"
+                            android:textSize="@dimen/_6sdp" />
+
+                        <com.eoutlet.Eoutlet.customview.MulishRegularTextView
+                            android:id="@+id/wishListItemPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="@dimen/_3sdp"
+                            android:layout_marginRight="@dimen/_3sdp"
+                            android:layout_toRightOf="@+id/wishListItemOldPrice"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            android:text="999SAR"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_7sdp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.9"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_3sdp">
+
+                    <FrameLayout
+                        android:id="@+id/addToCartButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/wishlist_button_curved_edges">
+
+                        <com.eoutlet.Eoutlet.customview.MulishBoldTextView
+                            android:id="@+id/addToCartText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Add to Cart"
+                            android:textColor="#fff"
+                            android:textSize="@dimen/_7sdp" />
+                    </FrameLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

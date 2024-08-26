@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_8sdp"
+    android:layout_marginRight="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_12sdp"
+    android:id="@+id/singleproduct"
+    android:background="@drawable/rounded_corner_shape">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffff"
+        android:elevation="@dimen/_5sdp">
+
+        <ImageView
+            android:id="@+id/product_list_image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_centerInParent="true"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:src="@drawable/shoe1" />
+
+
+        <RelativeLayout
+            android:id="@+id/productListAddToWishlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_margin="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/base"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:src="@drawable/ic_circlebackground" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:id="@+id/heartbtn"
+                android:src="@drawable/productdetailheart" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_8sdp"
+        android:layout_marginRight="@dimen/_2sdp"
+        android:id="@+id/productname"
+        android:gravity="center"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:textColor="#1E2022"
+        android:text="ROBERTO CAVALLI - PERFUME656565656565656"
+        android:textSize="@dimen/_9sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal">
+
+        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+            android:id="@+id/oldprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/cut_line"
+            android:text="666"
+            android:layout_marginRight="@dimen/_4sdp"
+            android:textColor="#1E2022"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_8sdp" />
+
+        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+            android:id="@+id/newprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:layout_centerVertical="true"
+            android:text="666"
+            android:layout_toRightOf="@+id/oldprice"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_9sdp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

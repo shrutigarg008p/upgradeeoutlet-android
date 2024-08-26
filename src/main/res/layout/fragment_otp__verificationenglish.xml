@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.Otp_Verificationfragment">
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:id="@+id/mainlayout"
+
+        android:paddingTop="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/main_icon2"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone"
+
+            android:layout_marginTop="80dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_elogo" />
+        <ImageView
+            android:layout_width="@dimen/main_icon"
+            android:layout_height="@dimen/main_icon2"
+            android:scaleType="fitXY"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+
+
+
+            android:src="@drawable/ic_canvas" />
+
+        <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+            android:id="@+id/textview_otp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="#FF4081"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size"
+
+            android:textColor="@color/colour_black"
+
+            android:gravity="center_horizontal"
+            android:text="Mobile number verification" />
+
+        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+            android:id="@+id/textviewmain"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="#FF4081"
+
+            android:layout_marginTop="@dimen/margin_top"
+            android:textSize="@dimen/text_size_eng"
+
+            android:textColor="@color/colour_black"
+
+            android:gravity="center_horizontal"
+            android:text="التحقق من رقم الجوال" />
+        <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+            android:id="@+id/edittext_otp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:drawableTint="#FF4081"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textSize="@dimen/maintextsize"
+            android:hint="Please enter OTP."
+            android:singleLine="true"/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/text_size"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/resendotp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+
+                android:background="@drawable/grey_rectangle_shape"
+                android:clickable="false"
+                android:text="Resend OTP"
+                android:textAllCaps="false"
+                android:textColor="#000"
+                android:textSize="@dimen/maintextsize" />
+
+            <Button
+                android:id="@+id/register"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/text_size_eng"
+                android:layout_weight="1"
+                android:background="@drawable/red_rectangle"
+                android:clickable="true"
+                android:text="Verify OTP"
+                android:textAllCaps="false"
+
+
+                android:textColor="#fff"
+                android:textSize="@dimen/maintextsize" />
+        </LinearLayout>
+
+
+        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend After"
+            android:id="@+id/resendtext"
+            android:layout_marginTop="@dimen/text_size"
+            android:layout_gravity="center_horizontal"
+
+
+            android:textSize="@dimen/text_size_eng"
+
+            />
+    </LinearLayout>
+
+</FrameLayout>

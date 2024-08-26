@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/addressContainer"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Addressfragment"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+
+  >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:background="#FFF"
+
+        android:layout_height="70dp"
+
+        android:layout_alignParentTop="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="#D8A664"
+                android:textStyle="bold"
+                android:textSize="14dp"
+                android:text="تعقب الطلب "/>
+
+            <ImageView
+                android:id="@+id/serachbar"
+                android:layout_width="@dimen/search_image_width"
+
+                android:layout_height="@dimen/search_image_width"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+
+                android:layout_weight="0.25"
+                android:gravity="center_horizontal"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_filter_profile" />
+            <ImageView
+                android:layout_width="@dimen/back_image_width"
+                android:layout_height="@dimen/_10sdp"
+
+                android:id="@+id/backarrow"
+                android:gravity="center_horizontal"
+                android:layout_alignParentLeft="true"
+
+                android:layout_centerVertical="true"
+                android:layout_weight="0.25"
+
+                android:src="@drawable/ic_backarrow" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="0.25dp"
+        android:background="@color/colour_black"/>
+    <TextView
+        android:id="@+id/addnewAddress"
+        android:layout_width="@dimen/btn_width"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/margin_top"
+        android:background="@drawable/red_rectangle"
+        android:gravity="center"
+        android:text="إضافة عنوان جديد"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/address_list_Recycler"
+        android:scrollbars="vertical"
+        android:layout_marginTop="@dimen/et_padding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>
+</FrameLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".fragments.ShopByFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFFF"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    android:text="Shop By"
+                    android:textColor="#D8A664"
+                    android:textSize="@dimen/maintextsize"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/serachbar"
+                    android:layout_width="@dimen/search_image_width"
+                    android:layout_height="@dimen/search_image_width"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_filter_profile" />
+
+                <ImageView
+                    android:id="@+id/backarrow"
+                    android:layout_width="@dimen/back_image_width"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.25"
+                    android:gravity="center_horizontal"
+                    android:rotation="180"
+                    android:src="@drawable/ic_backarrow" />
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/shopByContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:orientation="vertical">
+
+            <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                android:id="@+id/shopwomen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/ic_unselectbtnbackground"
+                android:gravity="center"
+                android:text="تسوق نساء"
+                android:textColor="@color/colour_black"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                android:id="@+id/shopmen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/ic_unselectbtnbackground"
+                android:gravity="center"
+                android:text="تسوق رجال"
+                android:textColor="@color/colour_black"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                android:id="@+id/shopkids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/ic_unselectbtnbackground"
+                android:gravity="center"
+                android:text="تسوق مواليد"
+                android:textColor="@color/colour_black"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                android:id="@+id/shopchild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/ic_unselectbtnbackground"
+                android:gravity="center"
+                android:text="تسوق أطفال"
+                android:textColor="@color/colour_black"
+                android:textSize="@dimen/_10sdp" />
+
+            <FrameLayout
+                android:id="@+id/shopByApplyButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:background="@drawable/ic_mapbutton">
+
+                <com.eoutlet.Eoutlet.customview.HelveticaNueAlticBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:letterSpacing="0.1"
+                    android:text="تطبيق"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/_12sdp" />
+            </FrameLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</FrameLayout>

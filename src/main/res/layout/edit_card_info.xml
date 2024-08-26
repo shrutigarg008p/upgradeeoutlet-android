@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:id="@+id/cardradiobutton"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="12dp"
+    android:layout_marginTop="12dp"
+    android:layout_marginRight="12dp"
+
+    android:elevation="6dp"
+
+    android:paddingBottom="@dimen/_15sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="10dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"
+
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="190dp"
+                android:layout_height="29dp"
+                android:layout_centerVertical="true"
+                android:scaleType="fitXY"
+                android:layout_gravity="center_vertical|right"
+
+                android:layout_toRightOf="@+id/name"
+                android:visibility="gone"
+                android:src="@drawable/cardsimage" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/name"
+                android:background="@drawable/rectangular_border"
+                android:padding="1dp"
+                android:src="@drawable/ic_visa"
+
+                />
+
+            <ImageView
+                android:id="@+id/cardname"
+                android:layout_width="40dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical|right"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/name"
+                android:visibility="gone"
+                android:background="@drawable/rectangular_border"
+                android:padding="1dp"
+                android:src="@drawable/ic_mastercard" />
+
+
+        </LinearLayout>
+
+
+
+        <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1E2022"
+            android:text="رقم البطاقة الائتمانية "
+            android:textStyle="bold"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/margin_top"
+            android:textSize="@dimen/_9sdp"/>
+
+        <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+            android:id="@+id/edtcardnumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:maxLength="16"
+            android:textSize="@dimen/_9sdp"
+            android:paddingLeft="@dimen/_9sdp"
+            android:paddingBottom="@dimen/_9sdp"
+            android:paddingTop="@dimen/_9sdp"
+            android:hint="مثال : xxxx xxx xxxx 123"
+            android:inputType="number"
+
+            android:singleLine="true"
+
+            android:textColor="@color/colour_black"
+
+
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#1E2022" />
+
+
+        <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#1E2022"
+            android:text="الاسم على البطاقة"
+            android:textStyle="bold"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="right"
+            android:layout_marginTop="@dimen/text_size_eng"
+
+            android:textSize="@dimen/_9sdp"/>
+
+        <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+            android:id="@+id/edtcardname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@android:color/transparent"
+            android:gravity="right"
+            android:textSize="@dimen/_9sdp"
+            android:paddingLeft="@dimen/_9sdp"
+            android:paddingBottom="@dimen/_9sdp"
+            android:paddingTop="@dimen/_9sdp"
+            android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:hint="كما يظهر على البطاقة الائتمانية "
+
+
+            android:singleLine="true"
+
+            android:textColor="@color/colour_black"
+
+
+            />
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dip"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#1E2022" />
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="vertical">
+                <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#1E2022"
+                    android:text="االكود"
+                    android:textStyle="bold"
+android:layout_marginRight="30dp"
+                    android:layout_gravity="right"
+
+                    android:textSize="@dimen/_9sdp"/>
+                <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                    android:id="@+id/cvv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:maxLength="4"
+
+                    android:layout_marginRight="30dp"
+                    android:background="@android:color/transparent"
+                    android:gravity="right"
+
+                    android:hint="االكود(3 أرقام) "
+                    android:inputType="number"
+                    android:textSize="@dimen/_9sdp"
+                    android:paddingLeft="@dimen/_9sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:paddingTop="@dimen/_9sdp"
+                    android:singleLine="true"
+
+                    android:textColor="@color/colour_black"
+
+
+                    />
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dip"
+
+                    android:layout_marginRight="30dp"
+
+                    android:background="#1E2022" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/margin_top"
+                android:orientation="vertical">
+                <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#1E2022"
+                    android:text="تاريخ الإنتهاء "
+                    android:textStyle="bold"
+
+                    android:layout_gravity="right"
+
+                    android:textSize="@dimen/_9sdp"/>
+                <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+                    android:id="@+id/monthandyear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:textIsSelectable="true"
+                    android:textSize="@dimen/_9sdp"
+                    android:paddingLeft="@dimen/_9sdp"
+                    android:paddingBottom="@dimen/_9sdp"
+                    android:paddingTop="@dimen/_9sdp"
+                    android:inputType="none"
+                    android:focusableInTouchMode="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+
+                    android:background="@android:color/transparent"
+                    android:gravity="right"
+
+                    android:hint="السنة / الشهر "
+
+                    android:singleLine="true"
+
+                    android:textColor="@color/colour_black"
+
+
+                    />
+
+                <!-- تاريخ الإنتهاء-->
+
+
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="0.5dip"
+
+
+                    android:background="#1E2022" />
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_size"
+            android:layout_marginBottom="@dimen/text_size_eng"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/text_size_eng"
+                android:layout_height="wrap_content"
+                android:src="@drawable/closed"
+                android:layout_marginLeft="@dimen/margin_top"/>
+            <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colour_black"
+                android:layout_centerInParent="true"
+                android:text="حفظ هذه البطاقة لاستخدامها لاحقا"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/_9sdp"/>
+
+            <ImageView
+                android:layout_width="@dimen/text_size_eng"
+                android:layout_height="@dimen/text_size_eng"
+                android:layout_centerInParent="true"
+                android:id = "@+id/remembermeselect"
+                android:src="@drawable/checkboxunselected"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_top"
+                android:layout_marginLeft="15dp"/>
+
+
+
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top"
+            android:visibility="gone"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            >
+
+
+            <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#1E2022"
+                android:layout_alignParentRight="true"
+
+
+                android:id="@+id/cardselecttext"
+
+
+                android:text="حفظ بيانات البطاقة الائتمانية لعمليات الشراء القادمة"
+                android:textStyle="bold"
+
+                android:textSize="@dimen/card_number"/>
+
+            <ImageView
+                android:layout_width="@dimen/text_size"
+                android:layout_height="@dimen/text_size"
+                android:layout_toLeftOf="@+id/cardselecttext"
+
+
+
+                android:src="@drawable/ic_unselect_card"
+
+                android:layout_marginRight="10dp"
+                />
+
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

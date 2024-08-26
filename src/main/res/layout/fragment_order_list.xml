@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#F7F8FA"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+    tools:context="com.eoutlet.Eoutlet.fragments.OrderListFragment">
+   <android.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+
+       android:background="@color/toolbar_color"
+       android:layout_alignParentTop="true" >
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+         <ImageView
+             android:id="@+id/logo"
+             android:layout_width="70dp"
+             android:layout_height="25dp"
+
+
+             android:layout_centerInParent="true"
+             android:scaleType="fitXY"
+             android:src="@drawable/ic_canvas" />
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_centerHorizontal="true"
+             android:textColor="@color/colour_black"
+             android:textStyle="bold"
+             android:textSize="@dimen/list_group_size"
+             android:visibility="gone"
+             android:text="قائمة الطلبات"/>
+
+      </RelativeLayout>
+   </android.widget.Toolbar>
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="#EDEDED"
+       android:id="@+id/recyclerView"
+       />
+
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.Splash2">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:id = "@+id/zoomoutImage"
+        android:layout_marginLeft="@dimen/splash_left"
+        android:layout_marginRight="@dimen/splash_right"
+        android:layout_marginTop="@dimen/splash_top"
+        android:layout_marginBottom="@dimen/splash_bottom"
+        />
+
+
+    <ImageView
+        android:layout_width="@dimen/main_icon"
+        android:layout_height="@dimen/main_icon2"
+
+        android:scaleType="fitXY"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/ic_canvas"
+        android:layout_gravity="center|bottom"
+        android:gravity="bottom"
+        android:layout_marginBottom="65dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:id="@+id/titletext"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:text="E O U T L E T"
+
+        android:textSize="30dp"
+
+
+        android:gravity="bottom"
+        android:layout_marginBottom="200dp"/>
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="120dp"
+        android:layout_height="3dp"
+        android:layout_marginBottom="50dp"
+        android:layout_gravity="center|bottom"
+
+        android:progressDrawable="@drawable/progresswhite"
+
+        style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+        />
+</FrameLayout>

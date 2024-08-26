@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="110dp"
+    android:orientation="horizontal"
+    android:id="@+id/groupbuttonclick"
+    android:background="#fff"
+    >
+
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="110dp"
+        android:scaleType="fitXY"
+        android:id= "@+id/catagory_image"
+        android:layout_marginRight="@dimen/text_size"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/cat_image"/>
+    <TextView
+        android:id="@+id/listTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size"
+        android:layout_centerVertical="true"
+
+        android:textColor="@color/colour_black"
+        android:gravity="center_horizontal"
+        android:text="sa"
+        android:layout_toLeftOf="@+id/arrow_img"
+        android:layout_marginRight="40dp"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id= "@+id/arrow_img"
+        android:layout_marginRight="@dimen/text_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_drop_icon"/>
+
+</RelativeLayout>

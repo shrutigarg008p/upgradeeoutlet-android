@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <com.eoutlet.Eoutlet.customview.HalveticRegularEditText
+        android:id="@+id/citySearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/underline"
+        android:drawableRight="@drawable/ic_search_upgrade"
+        android:drawablePadding="@dimen/_10sdp"
+        android:drawableTint="@color/white"
+        android:gravity="center_vertical|right"
+        android:padding="@dimen/_10sdp"
+        android:singleLine="true"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cityRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

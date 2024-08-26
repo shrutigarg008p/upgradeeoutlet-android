@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:background="@color/white">
+
+
+
+
+    <LinearLayout
+        android:layout_width="@dimen/product_width"
+        android:layout_height="@dimen/product_height"
+        android:id="@+id/imagelayout"
+        android:background="@drawable/rectangular_border2">
+    <ImageView
+        android:layout_width="@dimen/product_width"
+        android:layout_height="@dimen/product_height"
+
+
+
+
+        android:padding="0.5dip"
+
+        android:id = "@+id/mainimage"
+
+
+
+        />
+
+    </LinearLayout>
+
+
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/list_item_size"
+        android:id="@+id/productname5"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:layout_below="@+id/imagelayout"
+        android:text="fjddfldsfds"
+        android:layout_centerHorizontal="true"
+
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colour_black"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/productname5"
+
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_item_size"
+            android:text="fjddfldsfds"
+            android:id="@+id/oldprice5"
+            android:foreground="@drawable/cut_line"
+            android:textColor="@color/colour_black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/list_item_size"
+            android:text="fjddfldsfds"
+            android:id="@+id/newprice5"
+
+            android:layout_marginLeft="@dimen/text_size"
+            android:textColor="@color/colorPrimary"/>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

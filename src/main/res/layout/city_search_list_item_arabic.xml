@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cityNameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+            android:id="@+id/cityName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/underline"
+            android:drawableLeft="@drawable/radio"
+            android:drawablePadding="30dip"
+            android:ellipsize="marquee"
+            android:gravity="center_vertical|right"
+            android:layoutDirection="rtl"
+            android:padding="@dimen/_12sdp"
+            android:singleLine="true"
+            android:text="dssdasdsadsadsadasdasd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+
+
+</LinearLayout>

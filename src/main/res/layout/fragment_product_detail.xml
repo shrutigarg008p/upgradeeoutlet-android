@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/productContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffff">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible"
+        tools:context=".fragments.ProductDetail">
+
+        <!-- TODO: Update blank fragment layout -->
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp"
+            android:layout_alignParentTop="true"
+            android:background="#FFFFFF"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_weight="0.90"
+                        android:gravity="center">
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                            android:id="@+id/nameontop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center"
+                            android:singleLine="true"
+
+                            android:text=" "
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:textColor="#D8A664"
+                            android:textSize="@dimen/_11sdp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.10">
+
+                        <ImageView
+                            android:id="@+id/backarrow"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="0.50"
+                            android:rotation="180"
+                            android:gravity="center_horizontal"
+                            android:src="@drawable/ic_leftarrowlat" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/serachbar"
+                    android:layout_width="@dimen/_13sdp"
+                    android:layout_height="@dimen/_13sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.25"
+                    android:visibility="gone"
+                    android:gravity="center_horizontal"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_filter_profile" />
+
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.25dp"
+            android:background="@color/colour_black"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+<FrameLayout
+    android:layout_width="wrap_content"
+
+    android:layout_height="320dp">
+                <FrameLayout
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="@dimen/selected_product_height">
+
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/viewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/selected_product_height"
+                        android:layout_gravity="center_horizontal" />
+
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/indicator"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        app:tabBackground="@drawable/tab_selector"
+                        app:tabGravity="center"
+                        app:tabIndicatorHeight="0dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/productShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:layout_margin="@dimen/_9sdp">
+
+                        <ImageView
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:src="@drawable/ic_circlebackground" />
+
+                        <ImageView
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerInParent="true"
+                            android:gravity="center"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/share_new" />
+                    </RelativeLayout>
+
+
+
+                </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/addtowishlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left|bottom"
+
+
+        android:layout_marginLeft="@dimen/_9sdp">
+
+        <ImageView
+            android:id="@+id/base"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/ic_circlebackground" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id ="@+id/product_heart"
+
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:src="@drawable/productdetailheart" />
+    </RelativeLayout>
+
+</FrameLayout>
+                <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                    android:id="@+id/productName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:layout_marginLeft="@dimen/text_size_eng"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginRight="@dimen/text_size"
+                    android:gravity="right"
+                    android:text=" "
+
+                    android:textColor="#000000"
+                    android:textSize="@dimen/_9sdp" />
+
+
+                <LinearLayout
+                    android:id="@+id/sellerContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="@dimen/text_size_eng"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="@dimen/text_size_eng"
+                    android:gravity="right">
+                    <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                        android:id="@+id/sellerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:gravity="left|center_vertical"
+                        android:text=""
+                        android:textColor="#77838F"
+                        android:textSize="@dimen/_9sdp" />
+                    <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left|center_vertical"
+                        android:gravity="left|center_vertical"
+                        android:text="بائع :"
+                        android:textColor="#77838F"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:layout_marginLeft="@dimen/text_size_eng"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="@dimen/text_size_eng"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_gravity="left|center_vertical"
+                        android:gravity="center_vertical"
+
+
+                        >
+
+                        <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+                            android:id="@+id/sku"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="5dp"
+                            android:text="SKU :"
+
+
+                            android:textColor="#77838F"
+
+
+                            android:textSize="@dimen/_8sdp" />
+
+                        <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+                            android:id="@+id/skunumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+
+                            android:textColor="#77838F"
+
+                            android:textSize="@dimen/_8sdp"
+
+
+                            />
+
+
+                    </LinearLayout>
+
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:layout_marginLeft="@dimen/text_size_eng"
+                        android:gravity="right"
+                        android:text="وصف"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_9sdp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="@dimen/text_size_eng"
+                    android:layout_marginRight="@dimen/text_size"
+                    android:text="وصف"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_eng"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <com.eoutlet.Eoutlet.customview.HelveticaBoldTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/text_size"
+                    android:layout_marginTop="@dimen/text_size_eng"
+                    android:layout_marginRight="@dimen/text_size"
+                    android:text="حذاء من امبريو ارماني"
+                    android:textColor="@color/et_hint"
+                    android:textSize="@dimen/text_size_eng"
+                    android:visibility="gone" />
+
+                <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/text_size"
+                    android:layout_marginTop="@dimen/text_size_eng"
+                    android:layout_marginRight="@dimen/text_size"
+                    android:text="حذاء من امبريو ارماني"
+                    android:textColor="@color/et_hint"
+                    android:textSize="@dimen/text_size_eng"
+                    android:visibility="gone" />
+
+
+                <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                    android:id="@+id/productDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="@dimen/text_size"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginRight="@dimen/text_size"
+                    android:text=" "
+                    android:textColor="#77838F"
+                    android:textSize="@dimen/_9sdp" />
+
+                <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                    android:id="@+id/viewmore"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="@dimen/text_size"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:layout_marginRight="@dimen/text_size"
+                    android:text="قراءة المزيد…"
+                    android:textColor="#77838F"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_size_eng"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginRight="@dimen/text_size_eng">
+
+                    <TextView
+                        android:id="@+id/plus_button"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/selectedQuantitity"
+                        android:background="@drawable/grey_filled_rectangle"
+                        android:gravity="center"
+                        android:text="+"
+                        android:textColor="#686363"
+                        android:textSize="20dp" />
+
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                        android:id="@+id/selectedQuantitity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/minace_button"
+                        android:paddingLeft="@dimen/product_detail_padding"
+                        android:paddingTop="3dp"
+                        android:paddingRight="@dimen/product_detail_padding"
+                        android:paddingBottom="3dp"
+                        android:text="1"
+                        android:textColor="@color/colour_black"
+                        android:textSize="@dimen/text_size" />
+
+
+                    <FrameLayout
+                        android:id="@+id/minace_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/grey_filled_rectangle">
+
+                        <TextView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center"
+                            android:text="-"
+                            android:textColor="#686363"
+                            android:textSize="20dp" />
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:gravity="right|center_vertical">
+
+                        <ImageView
+                            android:id="@+id/colorImage"
+                            android:layout_width="@dimen/text_size"
+                            android:layout_height="@dimen/text_size"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="10dp" />
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:text="الألوان  "
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_8sdp"
+                            android:textStyle="bold" />
+                        />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_size"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="@dimen/size_btn_width"
+                        android:layout_height="@dimen/size_btn_height"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/grey_rectangle"
+                        android:gravity="center"
+                        android:text="32"
+                        android:textColor="@color/colour_black" />
+
+
+                    <TextView
+                        android:layout_width="@dimen/size_btn_width"
+                        android:layout_height="@dimen/size_btn_height"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/grey_rectangle"
+                        android:gravity="center"
+                        android:text="34"
+                        android:textColor="@color/colour_black" />
+
+                    <TextView
+                        android:layout_width="@dimen/size_btn_width"
+                        android:layout_height="@dimen/size_btn_height"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/grey_rectangle"
+                        android:gravity="center"
+                        android:text="36"
+                        android:textColor="@color/colour_black" />
+
+                    <TextView
+                        android:layout_width="@dimen/size_btn_width"
+                        android:layout_height="@dimen/size_btn_height"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/red_rectangle"
+                        android:gravity="center"
+                        android:text="38"
+                        android:textColor="@color/colour_black" />
+
+                    <TextView
+                        android:layout_width="@dimen/size_btn_width"
+                        android:layout_height="@dimen/size_btn_height"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/grey_rectangle"
+                        android:gravity="center"
+                        android:text="40"
+                        android:textColor="@color/colour_black" />
+
+                    <TextView
+                        android:layout_width="@dimen/size_btn_width"
+                        android:layout_height="@dimen/size_btn_height"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/grey_rectangle"
+                        android:gravity="center"
+                        android:text="42"
+                        android:textColor="@color/colour_black" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/text_size"
+                    android:gravity="center_horizontal"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_btn_width"
+                        android:layout_height="@dimen/size_btn_height"
+                        android:layout_margin="5dp"
+
+                        android:background="@drawable/red_rectangle"
+                        android:gravity="center"
+                        android:text="42"
+                        android:textColor="@color/colour_black" />
+
+                    <ImageView
+                        android:layout_width="@dimen/size_btn_width"
+                        android:layout_height="@dimen/size_btn_height"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/red_rectangle"
+                        android:gravity="center"
+                        android:text="42"
+                        android:textColor="@color/colour_black" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/colorandsize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/colorname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@+id/colortext"
+                            android:gravity="right"
+                            android:text="blue"
+                            android:textColor="@color/et_hint"
+                            android:textSize="@dimen/text_size_eng" />
+
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                            android:id="@+id/colortext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10dp"
+                            android:gravity="right"
+                            android:text="اللون:"
+                            android:textColor="@color/colour_black"
+                            android:textSize="@dimen/_9sdp"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="visible">
+
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                            android:id="@+id/selectsizetext"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+
+                            android:gravity="right|center_vertical"
+                            android:text="المقاس :"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_8sdp"
+                            android:textStyle="bold" />
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                            android:id="@+id/sizename"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+
+
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/selectsizetext"
+                            android:text=" "
+                            android:textColor="@color/et_hint"
+                            android:textSize="@dimen/_9sdp" />
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                            android:id="@+id/opensizechart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/sizename"
+                            android:gravity="right|center_vertical"
+                            android:text="@string/sizechartarabic"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/_10sdp"
+
+                            android:visibility="gone" />
+                        <ImageView
+                            android:visibility="gone"
+                            android:id="@+id/sizechartimage"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_12sdp"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_toLeftOf="@+id/opensizechart"
+                            android:src="@drawable/sizechart" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativesimplesizeview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaRegularTextView
+                            android:id="@+id/sizeofsimpleItems"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/grey_filled_rectangle"
+                            android:padding="10dp"
+                            android:text="XL"
+                            android:textColor="@android:color/black" />
+
+
+                    </RelativeLayout>
+
+
+                    <androidx.core.widget.NestedScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/size_list_Recycler"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="fill_vertical"
+                                android:layout_marginTop="8dp"
+                                android:orientation="horizontal"
+                                android:overScrollMode="never"
+                                android:scrollbars="vertical"
+                                android:stretchMode="none" />
+
+                        </LinearLayout>
+                    </androidx.core.widget.NestedScrollView>
+
+
+                </LinearLayout>
+
+                <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:gravity="right|center_vertical"
+                    android:text="Size Chart"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_8sdp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="@dimen/_9sdp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/text_size">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_gravity="right|center_vertical"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/text_size"
+                            android:gravity="center_vertical">
+
+                            <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+                                android:id="@+id/productoldPrice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:foreground="@drawable/cut_line"
+                                android:gravity="center_vertical"
+
+                                android:textColor="#1E2022"
+                                android:textSize="@dimen/_8sdp" />
+
+                            <com.eoutlet.Eoutlet.customview.MonestarteSemiBoldTextView
+                                android:id="@+id/productnewprice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="8dp"
+
+                                android:textColor="#1E2022"
+                                android:textSize="@dimen/_9sdp" />
+
+
+                        </LinearLayout>
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right"
+                            android:text="شامل الضريبة"
+                            android:textColor="#1E2022"
+                            android:textSize="@dimen/_8sdp" />
+
+
+                    </LinearLayout>
+
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:background="@drawable/green_rectangular_button">
+
+                        <com.eoutlet.Eoutlet.customview.HelveticaNue75BoldTextview
+                            android:id="@+id/addtoCart"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/text_size"
+                            android:paddingRight="@dimen/text_size"
+                            android:text="إضافة لسلة التسوق"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_eng" />
+
+                    </FrameLayout>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="@dimen/text_size"
+                    android:background="@drawable/green_rectangular_button"
+                    android:gravity="center"
+                    android:paddingLeft="55dp"
+                    android:paddingTop="8dp"
+                    android:paddingRight="55dp"
+                    android:paddingBottom="8dp"
+                    android:text="إضافة لسلة التسوق"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/relatedproducttext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:visibility="visible"
+                    android:weightSum="3">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_weight="0.75"
+                        android:background="@color/colour_black" />
+
+
+                    <com.eoutlet.Eoutlet.customview.HelveticaNueAlticArabicTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.5"
+                        android:gravity="center"
+                        android:text="منتجات ذات الصلة"
+                        android:textColor="@color/colour_black"
+                        android:textSize="@dimen/text_size_eng"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="0.75"
+                        android:background="@color/colour_black" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/text_size"
+                    android:background="#F7F7F7"
+                    android:orientation="vertical"
+                    android:visibility="visible">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/related_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="vertical" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+</FrameLayout>
